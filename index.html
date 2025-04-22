@@ -138,48 +138,54 @@
         </nav>
     </section>
 
+    <!-- TODO : Fix the bug of the image that disappear (3,4,5,6) when resizing the page -->
+
     <!-- Carousel -->
     <section>
-        <div id="controls-carousel" class="block w-full" data-carousel="static">
+        <div id="controls-carousel" class="relative w-full" data-carousel="static">
             <!-- Carousel wrapper -->
-            <div class="relative overflow-hidden min-h-[calc(100vh-112px)] lg:min-h-[calc(100vh-160px)]">
+            <div id="carouselWrapper" class="relative overflow-hidden xl:max-h-[calc(100vh-160px)]">
                 <!-- Item 1 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                     <img src="assets/img/carousel/yaris.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-[60%] top-1/2 left-1/2" alt="Yaris">
+                        class="absolute block w-full xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-[60%]"
+                        alt="Yaris">
                 </div>
                 <!-- Item 2 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="assets/img/carousel/bmw.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-[65%] top-1/2 left-1/2" alt="Bmw">
+                        class="absolute block w-full xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-[65%]"
+                        alt="Bmw">
                 </div>
                 <!-- Item 3 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="assets/img/carousel/mercedes.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-[65%] top-1/2 left-1/2"
+                        class="absolute block w-full xl:top-1/2 xl:left-1/2 xl:-translate-x-1/2 xl:-translate-y-[65%]"
                         alt="Mercedes">
                 </div>
                 <!-- Item 4 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="assets/img/carousel/remorque.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-[50%] top-1/2 left-1/2"
+                        class="absolute block w-full xl:-translate-x-1/2 xl:-translate-y-[50%] xl:top-1/2 xl:left-1/2"
                         alt="Remorque">
                 </div>
                 <!-- Item 5 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="assets/img/carousel/honda.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-[50%] top-1/2 left-1/2" alt="Honda">
+                        class="absolute block w-full xl:-translate-x-1/2 xl:-translate-y-[50%] xl:top-1/2 xl:left-1/2"
+                        alt="Honda">
                 </div>
                 <!-- Item 6 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="assets/img/carousel/triumph.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-[60%] top-1/2 left-1/2"
+                        class="absolute block w-full xl:-translate-x-1/2 xl:-translate-y-[60%] xl:top-1/2 xl:left-1/2"
                         alt="Triumph">
                 </div>
                 <!-- Item 7 -->
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
                     <img src="assets/img/carousel/trott.jpg"
-                        class="absolute block w-full -translate-x-1/2 -translate-y-[60%] top-1/2 left-1/2" alt="Trott">
+                        class="absolute block w-full xl:-translate-x-1/2 xl:-translate-y-[60%] xl:top-1/2 xl:left-1/2"
+                        alt="Trott">
                 </div>
             </div>
             <!-- Slider controls -->
@@ -211,8 +217,29 @@
             </button>
         </div>
     </section>
+
+    <section>
+        <p>test</p>
+    </section>
+
     <!-- Flowbite JS Script -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 
 </html>
+
+<script>
+    function adjustCarouselHeight() {
+        const wrapper = document.querySelector('#carouselWrapper');
+        const activeImage = document.querySelector('[data-carousel-item="active"] img');
+
+        if (wrapper && activeImage) {
+            const height = activeImage.offsetHeight;
+            wrapper.style.height = height + 'px';
+        }
+    }
+
+    // Appel initial + on resize
+    window.addEventListener('load', adjustCarouselHeight);
+    window.addEventListener('resize', adjustCarouselHeight);
+</script>
