@@ -5,3 +5,7 @@
 .bg-primary-color {
     background-color: #AD2B31;
 }
+
+.active {
+    color: #c10007;
+}
