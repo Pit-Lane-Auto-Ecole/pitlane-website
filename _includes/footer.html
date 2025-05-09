@@ -1,0 +1,75 @@
+<footer>
+    <div class="max-w-screen-xl mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row justify-between gap-8">
+            <!-- Logo + Slogan -->
+            <div class="flex flex-col space-y-2">
+                <a href="{{ '/' | relative_url }}" class="flex items-center space-x-3">
+                    <img src="{{ '/assets/img/logo.png' | relative_url }}" class="h-20 xl:min-h-32"
+                        alt="Pitlane Logo" />
+                </a>
+                <span class="text-lg lg:text-xl xl:text-2xl text-gray-500">L'artisan auto-école</span>
+            </div>
+
+            <!-- Liens de navigation -->
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h2 class="mb-4 font-semibold text-gray-900 uppercase">Les Cours</h2>
+                    <ul class="text-gray-500 font-medium space-y-2">
+                        <li><a href="{{ '/pages/courses/auto-ecole.html' | relative_url }}"
+                                class="hover:underline">Auto-École</a></li>
+                        <li><a href="{{ '/pages/courses/moto-ecole.html' | relative_url }}"
+                                class="hover:underline">Moto-École</a></li>
+                        <li><a href="{{ '/pages/courses/trott-ecole.html' | relative_url }}"
+                                class="hover:underline">Trott-École</a></li>
+                        <li><a href="{{ '/pages/courses/remorque.html' | relative_url }}"
+                                class="hover:underline">Remorque</a>
+                        </li>
+                        <li><a href="{{ '/pages/courses/sensi.html' | relative_url }}"
+                                class="hover:underline">Sensibilisation</a></li>
+                        <li><a href="{{ '/pages/courses/samaritain.html' | relative_url }}"
+                                class="hover:underline">Samaritain</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-4 font-semibold text-gray-900 uppercase">Les Véhicules</h2>
+                    <ul class="text-gray-500 font-medium space-y-2">
+                        <li><a href="#" class="hover:underline">Manuelle</a></li>
+                        <li><a href="#" class="hover:underline">Automatique</a></li>
+                        <li><a href="#" class="hover:underline">Remorque</a></li>
+                        <li><a href="#" class="hover:underline">Trottinette Électrique</a></li>
+                        <li><a href="#" class="hover:underline">Moto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <hr class="w-full my-6 border-gray-200" />
+        <div class="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
+            <span>
+                © 2020 <a href="https://www.pitlane-autoecole.ch/" class="hover:underline">Auto-École Pitlane</a>. Tous
+                droits réservés.
+            </span>
+            <div class="flex space-x-4 mt-4 sm:mt-0">
+                <a href="mailto:max@pitlane-autoecole.ch" class="hover:text-gray-900">
+                    <span class="sr-only">Mail</span>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 512 512">
+                        <path d="M64 112c-8.8 0-16 7.2-16 16..." />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/Maximelemoniteur/" class="hover:text-gray-900">
+                    <span class="sr-only">Facebook</span>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 320 512">
+                        <path d="M80 299.3V512H196V299.3h86.5..." />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/pitlane_autoecole" class="hover:text-gray-900">
+                    <span class="sr-only">Instagram</span>
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 448 512">
+                        <path d="M224.1 141c-63.6 0-114.9..." />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
