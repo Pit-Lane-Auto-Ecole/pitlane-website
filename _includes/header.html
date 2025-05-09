@@ -17,7 +17,7 @@
                 <ul
                     class="uppercase flex flex-col font-semibold text-md p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 xl:text-lg lg:space-x-8 lg:flex-row lg:mt-0 lg:border-0 md:bg-white">
                     <li>
-                        <button id="dropdownNavbarLinkLessons" data-dropdown-toggle="dropdownLessons"
+                        <button id="dropdownNavbarLinkCourses" data-dropdown-toggle="dropdownCourses"
                             class="cursor-pointer uppercase flex items-center justify-between w-full py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0 lg:w-auto">
                             Les cours
                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -27,41 +27,42 @@
                             </svg>
                         </button>
                         <!-- Dropdown menu -->
-                        <div id="dropdownLessons"
+                        <div id="dropdownCourses"
                             class="hidden font-semibold text-base bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-3xs">
                             <ul class="text-md">
                                 <li>
                                     <a href="{{ '/pages/courses/auto-ecole.html' | relative_url }}"
-                                        class="{% if page.url contains 'auto-ecole.html' %}active{% endif %}
+                                        class="{% if page.nav_active == 'courses-autoecole' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700 rounded-t-lg">Auto-école</a>
                                 </li>
                                 <li>
-                                    <a href="{{ '/pages/courses/moto-ecole.html' | relative_url }}" class="{% if page.url contains 'moto-ecole.html' %}active{% endif %}
+                                    <a href="{{ '/pages/courses/moto-ecole.html' | relative_url }}" class="{% if page.nav_active == 'courses-motoecole' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Moto-école</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="{% if page.url contains 'trott-ecole.html' %}active{% endif %}
+                                    <a href="#" class="{% if page.nav_active == 'courses-trottecole' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Trott-école</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="{% if page.url contains 'remorque.html' %}active{% endif %}
+                                    <a href="#" class="{% if page.nav_active == 'courses-trailer' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Remorque</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="{% if page.url contains 'sensi.html' %}active{% endif %}
+                                    <a href="#" class="{% if page.nav_active == 'courses-sensi' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Sensibilisation</a>
                                 </li>
                                 <li>
                                     <a href="#"
-                                        class="{% if page.url contains 'samaritain.html' %}active{% endif %}
+                                        class="{% if page.nav_active == 'courses-samaritain' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700 rounded-b-lg">Samaritain</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li>
-                        <a href="{{ '/pages/moniteur.html' | relative_url }}"
-                            class="{% if page.url contains 'moniteur.html' %}active{% endif %} block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">Le
+                        <a href="{{ '/pages/monitor.html' | relative_url }}"
+                            class="{% if page.nav_active == 'monitor' %}active{% endif %}
+                            block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">Le
                             Moniteur</a>
                     </li>
                     <li>
@@ -79,24 +80,24 @@
                             class="hidden font-semibold text-base bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-3xs">
                             <ul class="text-md">
                                 <li>
-                                    <a href="#" class="{% if page.url contains 'manuelle.html' %}active{% endif %}
+                                    <a href="#" class="{% if page.nav_active == 'vehicles-manual' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700 rounded-t-lg">Manuelle</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="{% if page.url contains 'automatique.html' %}active{% endif %}
+                                    <a href="#" class="{% if page.nav_active == 'vehicles-automatic' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Automatique</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="{% if page.url contains 'remorque.html' %}active{% endif %}
+                                    <a href="#" class="{% if page.nav_active == 'vehicles-trailer' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Remorque</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="{% if page.url contains 'electrique.html' %}active{% endif %}
+                                    <a href="#" class="{% if page.nav_active == 'vehicles-electric' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Trotinette
                                         Électrique</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="{% if page.url contains 'moto.html' %}active{% endif %}
+                                    <a href="#" class="{% if page.nav_active == 'vehicles-moto' %}active{% endif %}
                                         block px-4 py-2 hover:bg-gray-100 hover:text-red-700 rounded-b-lg">Moto</a>
                                 </li>
                             </ul>
@@ -104,22 +105,22 @@
                     </li>
                     <li>
                         <a href="#"
-                            class="{% if page.url contains 'lieux.html' %}active{% endif %}
+                            class="{% if page.nav_active == 'places' %}active{% endif %}
                             block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">Lieux</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="{% if page.url contains 'tarifs.html' %}active{% endif %}
+                            class="{% if page.nav_active == 'prices' %}active{% endif %}
                             block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">Tarifs</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="{% if page.url contains 'contact.html' %}active{% endif %}
+                            class="{% if page.nav_active == 'contact' %}active{% endif %}
                             block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">Contact</a>
                     </li>
                     <li>
                         <a href="{{ '/pages/english.html' | relative_url }}"
-                            class="{% if page.url contains 'english.html' %}active{% endif %}
+                            class="{% if page.nav_active == 'english' %}active{% endif %}
                             block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">English</a>
                     </li>
                 </ul>
