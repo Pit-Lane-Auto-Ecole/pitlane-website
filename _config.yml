@@ -1,0 +1,15 @@
+# Configuration du site Jekyll
+title: Auto-Ecole PitLane
+description: "Auto-Ecole PitLane"
+url: "https://www.monsite.com" # Remplace par l'URL de ton site
+
+# Réseaux sociaux
+socials:
+    facebook: "https://www.facebook.com/Maximelemoniteur/"
+    mail: "max@pitlane-autoecole.ch"
+    instagram: "https://www.instagram.com/pitlane_autoecole"
+
+# Chemin d'accès aux fichiers (assets)
+assets:
+    css: "/assets/css"
+    js: "/assets/js"
