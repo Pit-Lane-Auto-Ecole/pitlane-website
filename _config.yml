@@ -2,6 +2,7 @@
 title: Auto-Ecole PitLane
 description: "Auto-Ecole PitLane"
 url: "https://www.monsite.com" # Remplace par l'URL de ton site
+source: src
 
 # Réseaux sociaux
 socials:
