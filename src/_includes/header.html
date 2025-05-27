@@ -16,113 +16,45 @@
             <div class="hidden w-full lg:block lg:w-auto" id="navbar-dropdown">
                 <ul
                     class="uppercase flex flex-col font-semibold text-md p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 xl:text-lg lg:space-x-8 lg:flex-row lg:mt-0 lg:border-0 md:bg-white">
+                    {% for link in site.data.navigation %}
                     <li>
-                        <button id="dropdownNavbarLinkCourses" data-dropdown-toggle="dropdownCourses"
-                            class="cursor-pointer uppercase flex items-center justify-between w-full py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0 lg:w-auto">
-                            Les cours
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdownCourses"
+                        {% if link.dropdown %}
+                        <div class="flex items-center">
+                            <a href="{{ link.url | relative_url }}"
+                                class="uppercase py-2 px-3 flex-1 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-red-700 lg:p-0 {% if page.nav_active == link.nav_active %}active{% endif %}">
+                                {{ link.title }}
+                            </a>
+                            <button type="button" id="dropdownNavbarLink{{ forloop.index }}"
+                                data-dropdown-toggle="{{ link.id }}" aria-expanded="false"
+                                class="flex items-center px-2 py-2 text-sm text-gray-500 hover:text-red-700">
+                                <svg class="w-2.5 h-2.5" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div id="{{ link.id }}"
                             class="hidden font-semibold text-base bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-3xs">
-                            <ul class="text-md">
+                            <ul class="text-md" role="menu">
+                                {% for item in link.items %}
                                 <li>
-                                    <a href="{{ '/pages/courses/auto-ecole.html' | relative_url }}"
-                                        class="{% if page.nav_active == 'courses-autoecole' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700 rounded-t-lg">Auto-école</a>
+                                    <a href="{{ item.url | relative_url }}"
+                                        class="{% if page.nav_active == item.nav_active %}active{% endif %} block px-4 py-2 hover:bg-gray-100 hover:text-red-700 {% if forloop.first %}rounded-t-lg{% endif %} {% if forloop.last %}rounded-b-lg{% endif %}">
+                                        {{ item.title }}
+                                    </a>
                                 </li>
-                                <li>
-                                    <a href="{{ '/pages/courses/moto-ecole.html' | relative_url }}" class="{% if page.nav_active == 'courses-motoecole' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Moto-école</a>
-                                </li>
-                                <li>
-                                    <a href="{{ '/pages/courses/trott-ecole.html' | relative_url }}" class="{% if page.nav_active == 'courses-trottecole' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Trott-école</a>
-                                </li>
-                                <li>
-                                    <a href="{{ '/pages/courses/remorque.html' | relative_url }}" class="{% if page.nav_active == 'courses-trailer' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Remorque</a>
-                                </li>
-                                <li>
-                                    <a href="{{ '/pages/courses/sensibilisation.html' | relative_url }}" class="{% if page.nav_active == 'courses-sensi' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Sensibilisation</a>
-                                </li>
-                                <li>
-                                    <a href="{{ '/pages/courses/samaritain.html' | relative_url }}"
-                                        class="{% if page.nav_active == 'courses-samaritain' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700 rounded-b-lg">Samaritain</a>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </div>
+                        {% else %}
+                        <a href="{{ link.url | relative_url }}"
+                            class="{% if page.nav_active == link.nav_active %}active{% endif %} block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">
+                            {{ link.title }}
+                        </a>
+                        {% endif %}
                     </li>
-                    <li>
-                        <a href="{{ '/pages/monitor.html' | relative_url }}"
-                            class="{% if page.nav_active == 'monitor' %}active{% endif %}
-                            block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">Le
-                            Moniteur</a>
-                    </li>
-                    <li>
-                        <button id="dropdownNavbarLinkVehicles" data-dropdown-toggle="dropdownVehicles"
-                            class="cursor-pointer uppercase flex items-center justify-between w-full py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0 lg:w-auto">
-                            Les Véhicules
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg>
-                        </button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdownVehicles"
-                            class="hidden font-semibold text-base bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-3xs">
-                            <ul class="text-md">
-                                <li>
-                                    <a href="#" class="{% if page.nav_active == 'vehicles-manual' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700 rounded-t-lg">Manuelle</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="{% if page.nav_active == 'vehicles-automatic' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Automatique</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="{% if page.nav_active == 'vehicles-trailer' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Remorque</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="{% if page.nav_active == 'vehicles-electric' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700">Trotinette
-                                        Électrique</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="{% if page.nav_active == 'vehicles-moto' %}active{% endif %}
-                                        block px-4 py-2 hover:bg-gray-100 hover:text-red-700 rounded-b-lg">Moto</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="{% if page.nav_active == 'places' %}active{% endif %}
-                            block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">Lieux</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="{% if page.nav_active == 'prices' %}active{% endif %}
-                            block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">Tarifs</a>
-                    </li>
-                    <li>
-                        <a href="#"
-                            class="{% if page.nav_active == 'contact' %}active{% endif %}
-                            block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">Contact</a>
-                    </li>
-                    <li>
-                        <a href="{{ '/pages/english.html' | relative_url }}"
-                            class="{% if page.nav_active == 'english' %}active{% endif %}
-                            block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">English</a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
