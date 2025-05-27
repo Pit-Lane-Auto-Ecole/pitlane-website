@@ -10,58 +10,22 @@
                     auto-école</span>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+                {% for link in site.data.navigation %}
+                {% if link.dropdown %}
                 <div>
-                    <h2 class="mb-4 font-semibold text-gray-900 uppercase">Les Cours
-                    </h2>
+                    <h2 class="mb-4 font-semibold text-gray-900 uppercase">{{ link.title }}</h2>
                     <ul class="text-gray-500 font-medium">
+                        {% for item in link.items %}
                         <li class="mb-2">
-                            <a href="{{ '/pages/courses/auto-ecole.html' | relative_url }}"
-                                class="hover:underline">Auto-École</a>
+                            <a href="{{ item.url | relative_url }}" class="hover:underline">
+                                {{ item.title }}
+                            </a>
                         </li>
-                        <li class="mb-2">
-                            <a href="{{ '/pages/courses/moto-ecole.html' | relative_url }}"
-                                class="hover:underline">Moto-École</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="{{ '/pages/courses/trott-ecole.html' | relative_url }}"
-                                class="hover:underline">Trott-École</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="{{ '/pages/courses/remorque.html' | relative_url }}"
-                                class="hover:underline">Remorque</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="{{ '/pages/courses/sensibilisation.html' | relative_url }}"
-                                class="hover:underline">Sensibilisation</a>
-                        </li>
-                        <li>
-                            <a href="{{ '/pages/courses/samaritain.html' | relative_url }}"
-                                class="hover:underline">Samaritain</a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </div>
-                <div>
-                    <h2 class="mb-4 font-semibold text-gray-900 uppercase">Les Véhicules
-                    </h2>
-                    <ul class="text-gray-500 font-medium">
-                        <li class="mb-2">
-                            <a href="#" class="hover:underline">Manuelle</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="#" class="hover:underline">Automatique</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="#" class="hover:underline">Remorque</a>
-                        </li>
-                        <li class="mb-2">
-                            <a href="#" class="hover:underline">Tronitte Électrique</a>
-                        </li>
-                        <li>
-                            <a href="#" class="hover:underline">Moto</a>
-                        </li>
-                    </ul>
-                </div>
-
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
         <hr class="w-full my-4 border-gray-200 lg:my-8" />
