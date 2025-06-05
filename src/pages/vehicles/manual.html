@@ -3,55 +3,55 @@ layout: default
 nav_active: vehicles-manual
 ---
 
-<!-- Le moniteur -->
-<div class="flex px-4 sm:px-8 xl:px-0 max-w-6xl mx-auto justify-center">
-    <div class="py-12 lg:pt-20 bg-white md:px-0">
+<div class="max-w-6xl mx-auto px-4 sm:px-8">
+    <div class="py-12 lg:pt-20 bg-white">
         <div class="flex flex-col items-center">
-            <h1 class="text-4xl font-extrabold tracking-tight text-zinc-900 xl:text-6xl text-center md:text-left mb-6">
+            <h1 class="text-4xl xl:text-6xl font-extrabold text-center text-zinc-900 mb-6">
                 <span class="text-red-700">Manuelle</span>
             </h1>
+
             <div class="w-full mb-6">
-                <div class="flex w-full h-full overflow-hidden justify-center xl:px-8">
+                <div class="flex justify-center">
                     <div id="controls-carousel" class="relative w-full" data-carousel="slide">
-                        <!-- Carousel wrapper -->
                         <div
                             class="relative min-h-[18rem] sm:min-h-[31rem] lg:min-h-[40rem] xl:min-h-[48rem] overflow-hidden rounded-xl">
-                            <!-- Item 1 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                                 <img src="{{ '/assets/img/pages/vehicles/manual/1.jpg' | relative_url }}"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    class="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
                                     alt="Image 1">
                             </div>
-                            <!-- Item 2 -->
                             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                 <img src="{{ '/assets/img/pages/vehicles/manual/2.jpg' | relative_url }}"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    class="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
                                     alt="Image 2">
                             </div>
                         </div>
-                        <!-- Slider controls -->
+
+                        <!-- Prev Button -->
                         <button type="button"
                             class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group"
                             data-carousel-prev>
                             <span
                                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
-                                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M5 1 1 5l4 4" />
+                                <svg class="w-4 h-4 text-white" viewBox="0 0 6 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 1 1 5l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                                 <span class="sr-only">Previous</span>
                             </span>
                         </button>
+
+                        <!-- Next Button -->
                         <button type="button"
-                            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group "
+                            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group"
                             data-carousel-next>
                             <span
                                 class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
-                                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 9 4-4-4-4" />
+                                <svg class="w-4 h-4 text-white" viewBox="0 0 6 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="m1 9 4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
                                 </svg>
                                 <span class="sr-only">Next</span>
                             </span>
@@ -59,29 +59,30 @@ nav_active: vehicles-manual
                     </div>
                 </div>
             </div>
-            <div class="xl:px-8">
-                <div class="sm:min-w-[42rem] md:min-w-2xl lg:min-w-4xl xl:min-w-5xl 2xl:min-w-6xl mx-auto md:pr-0">
+
+            <div class="w-full xl:px-8">
+                <div class="mx-auto">
                     <div class="border border-gray-400 rounded-lg overflow-hidden">
                         <div class="bg-gray-200 px-4 py-2">
-                            <div class="font-bold text-lg lg:text-xl">Mercedes-Benz Classe A</div>
+                            <div class="font-bold text-lg lg:text-xl text-center">Mercedes-Benz Classe A</div>
                         </div>
                         <div>
-                            <table class="w-full lg:text-lg">
-                                <tbody class="text-center">
-                                    <tr class="border-b">
-                                        <td class="py-2 px-1 border-r w-1/2">La manuelle</td>
+                            <table class="w-full lg:text-lg text-center">
+                                <tbody>
+                                    <tr class="border-b border-t border-gray-400">
+                                        <td class="py-2 px-1 border-r w-1/2 border-gray-400">La manuelle</td>
                                         <td class="py-2 px-1">2013</td>
                                     </tr>
-                                    <tr class="border-b">
-                                        <td class="py-2 px-1 border-r">6 vitesses</td>
+                                    <tr class="border-b border-gray-400">
+                                        <td class="py-2 px-1 border-r border-gray-400">6 vitesses</td>
                                         <td class="py-2 px-1">Stop-Start</td>
                                     </tr>
-                                    <tr class="border-b">
-                                        <td class="py-2 px-1 border-r">Aide au démarrage en côte</td>
+                                    <tr class="border-b border-gray-400">
+                                        <td class="py-2 px-1 border-r border-gray-400">Aide au démarrage en côte</td>
                                         <td class="py-2 px-1">Phares et essuie-glace auto</td>
                                     </tr>
                                     <tr>
-                                        <td class="py-2 px-1 border-r">Caméra de recul</td>
+                                        <td class="py-2 px-1 border-r border-gray-400">Caméra de recul</td>
                                         <td class="py-2 px-1">Radar d'obstacles avant-arrière</td>
                                     </tr>
                                 </tbody>
@@ -90,6 +91,7 @@ nav_active: vehicles-manual
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
