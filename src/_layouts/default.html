@@ -31,6 +31,17 @@
 
     <!-- Data loader for table -->
     <script src="{{ 'assets/js/data-loader.js' | relative_url }}"></script>
+
+    <script>
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+            } else {
+                dropdown.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 
 </html>

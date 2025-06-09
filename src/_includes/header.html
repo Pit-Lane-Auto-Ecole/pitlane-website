@@ -17,16 +17,23 @@
                 <ul
                     class="uppercase flex flex-col font-semibold text-md p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 xl:text-lg lg:space-x-8 lg:flex-row lg:mt-0 lg:border-0 md:bg-white">
                     {% for link in site.data.navigation %}
-                    <li>
+                    <li class="relative group">
                         {% if link.dropdown %}
-                        <div class="flex items-center">
+                        <div class="flex items-center justify-between">
                             <a href="{{ link.url | relative_url }}"
-                                class="uppercase py-2 px-3 flex-1 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-red-700 lg:p-0 {% if page.nav_active == link.nav_active %}active{% endif %}">
+                                class="uppercase py-2 px-3 flex items-center rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-red-700 lg:p-0 {% if page.nav_active == link.nav_active %}active{% endif %}">
                                 {{ link.title }}
+                                <!-- Desktop button for the list -->
+                                <svg class="ml-1 w-2.5 h-2.5 hidden lg:inline-block" xmlns="http://www.w3.org/2000/svg"
+                                    fill="none" viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
                             </a>
-                            <button type="button" id="dropdownNavbarLink{{ forloop.index }}"
-                                data-dropdown-toggle="{{ link.id }}" aria-expanded="false"
-                                class="flex items-center px-2 py-2 text-sm text-gray-500 hover:text-red-700">
+
+                            <!-- Mobile button to display / hide -->
+                            <button type="button" class="lg:hidden px-2 py-2 text-sm text-gray-500 hover:text-red-700"
+                                onclick="toggleDropdown('{{ link.id }}')">
                                 <svg class="w-2.5 h-2.5" xmlns="http://www.w3.org/2000/svg" fill="none"
                                     viewBox="0 0 10 6">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -34,8 +41,10 @@
                                 </svg>
                             </button>
                         </div>
+
+                        <!-- Dropdown -->
                         <div id="{{ link.id }}"
-                            class="hidden font-semibold text-base bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-3xs">
+                            class="absolute top-full left-0 hidden lg:group-hover:block font-semibold text-base bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-full lg:w-64 z-50">
                             <ul class="text-md" role="menu">
                                 {% for item in link.items %}
                                 <li>
@@ -48,8 +57,9 @@
                             </ul>
                         </div>
                         {% else %}
+                        <!-- Simple link wihtout dropdown -->
                         <a href="{{ link.url | relative_url }}"
-                            class="{% if page.nav_active == link.nav_active %}active{% endif %} block py-2 px-3 rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0">
+                            class="uppercase py-2 px-3 block rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-red-700 lg:p-0 {% if page.nav_active == link.nav_active %}active{% endif %}">
                             {{ link.title }}
                         </a>
                         {% endif %}
