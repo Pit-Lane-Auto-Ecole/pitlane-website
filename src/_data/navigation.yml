@@ -52,7 +52,7 @@
   nav_active: "places"
 
 - title: "Tarifs"
-  url: "#"
+  url: "/pages/tarifs.html"
   nav_active: "prices"
 
 - title: "Contact"
