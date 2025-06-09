@@ -44,7 +44,7 @@
       url: "/pages/vehicles/trottinette.html"
       nav_active: "vehicles-trottinette"
     - title: "Moto"
-      url: "#"
+      url: "/pages/vehicles/moto.html"
       nav_active: "vehicles-moto"
 
 - title: "Lieux"
