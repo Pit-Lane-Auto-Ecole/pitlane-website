@@ -3,126 +3,123 @@ layout: default
 nav_active: vehicles-automatic
 ---
 
-<div class="max-w-6xl mx-auto px-4 sm:px-8">
-    <div class="py-12 bg-white">
-        <div class="flex flex-col items-center">
-            <h1 class="text-4xl xl:text-6xl font-extrabold text-center text-zinc-900 mb-6">
-                <span class="text-red-700">Automatique</span>
-            </h1>
+<div class="max-w-6xl mx-auto px-4 sm:px-8 py-6 lg:py-12">
+    <div class="flex flex-col items-center">
+        <h1 class="text-4xl xl:text-6xl font-extrabold text-center text-zinc-900 mb-6">
+            <span class="text-red-700">Automatique</span>
+        </h1>
 
-            <!-- Carousel -->
-            <div class="w-full mb-6">
-                <div class="flex justify-center">
-                    <div id="controls-carousel" class="relative w-full" data-carousel="slide">
-                        <div
-                            class="relative min-h-[16rem] sm:min-h-[27rem] lg:min-h-[36rem] xl:min-h-[41rem] overflow-hidden rounded-xl">
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                                <img src="{{ '/assets/img/pages/vehicles/automatic/1.jpg' | relative_url }}"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="Image 1">
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="{{ '/assets/img/pages/vehicles/automatic/2.jpg' | relative_url }}"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="Image 2">
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="{{ '/assets/img/pages/vehicles/automatic/3.jpg' | relative_url }}"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="Image 3">
-                            </div>
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="{{ '/assets/img/pages/vehicles/automatic/4.jpg' | relative_url }}"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="Image 4">
-                            </div>
+        <!-- Carousel -->
+        <div class="w-full mb-6">
+            <div class="flex justify-center">
+                <div id="controls-carousel" class="relative w-full" data-carousel="slide">
+                    <div
+                        class="relative min-h-[14rem] sm:min-h-[27rem] lg:min-h-[36rem] xl:min-h-[41rem] overflow-hidden rounded-xl">
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                            <img src="{{ '/assets/img/pages/vehicles/automatic/1.jpg' | relative_url }}"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="Image 1">
                         </div>
-
-                        <!-- Controls -->
-                        <button type="button"
-                            class="absolute top-0 start-0 z-30 flex items-center h-full px-4 cursor-pointer group"
-                            data-carousel-prev>
-                            <span
-                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
-                                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M5 1 1 5l4 4" />
-                                </svg>
-                                <span class="sr-only">Previous</span>
-                            </span>
-                        </button>
-                        <button type="button"
-                            class="absolute top-0 end-0 z-30 flex items-center h-full px-4 cursor-pointer group"
-                            data-carousel-next>
-                            <span
-                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
-                                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 9 4-4-4-4" />
-                                </svg>
-                                <span class="sr-only">Next</span>
-                            </span>
-                        </button>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="{{ '/assets/img/pages/vehicles/automatic/2.jpg' | relative_url }}"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="Image 2">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="{{ '/assets/img/pages/vehicles/automatic/3.jpg' | relative_url }}"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="Image 3">
+                        </div>
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="{{ '/assets/img/pages/vehicles/automatic/4.jpg' | relative_url }}"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="Image 4">
+                        </div>
                     </div>
+
+                    <!-- Controls -->
+                    <button type="button"
+                        class="absolute top-0 start-0 z-30 flex items-center h-full px-4 cursor-pointer group"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+                            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 end-0 z-30 flex items-center h-full px-4 cursor-pointer group"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
+                            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
                 </div>
             </div>
+        </div>
 
-            <div class="w-full">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 mx-auto items-start">
-                    <!-- Toyota -->
-                    <div class="border border-gray-400 rounded-lg overflow-hidden">
-                        <div class="bg-gray-200 px-4 py-2 font-bold text-lg text-center">Toyota Yaris</div>
-                        <table class="w-full text-center">
-                            <tbody>
-                                <tr class="border-b border-t border-gray-400">
-                                    <td class="py-2 px-1 border-r w-1/2 border-gray-400">La petite rouge</td>
-                                    <td class="py-2 px-1">2023</td>
-                                </tr>
-                                <tr class="border-b border-gray-400">
-                                    <td class="py-2 px-1 border-r border-gray-400">Hybride</td>
-                                    <td class="py-2 px-1">Affichage tête-haute</td>
-                                </tr>
-                                <tr class="border-b border-gray-400">
-                                    <td class="py-2 px-1 border-r border-gray-400">Radar d'obstacles avant-arrière</td>
-                                    <td class="py-2 px-1">Phares et essuie-glace auto</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2 px-1 border-r border-gray-400">Caméra de recul</td>
-                                    <td class="py-2 px-1">Longueur : 3,9 m</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+        <div class="w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 mx-auto items-start">
+                <!-- Toyota -->
+                <div class="border border-gray-400 rounded-lg overflow-hidden">
+                    <div class="bg-gray-200 px-4 py-2 font-bold text-lg text-center">Toyota Yaris</div>
+                    <table class="w-full text-center">
+                        <tbody>
+                            <tr class="border-b border-t border-gray-400">
+                                <td class="py-2 px-1 border-r w-1/2 border-gray-400">La petite rouge</td>
+                                <td class="py-2 px-1">2023</td>
+                            </tr>
+                            <tr class="border-b border-gray-400">
+                                <td class="py-2 px-1 border-r border-gray-400">Hybride</td>
+                                <td class="py-2 px-1">Affichage tête-haute</td>
+                            </tr>
+                            <tr class="border-b border-gray-400">
+                                <td class="py-2 px-1 border-r border-gray-400">Radar d'obstacles avant-arrière</td>
+                                <td class="py-2 px-1">Phares et essuie-glace auto</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-1 border-r border-gray-400">Caméra de recul</td>
+                                <td class="py-2 px-1">Longueur : 3,9 m</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-                    <!-- BMW -->
-                    <div class="border border-gray-400 rounded-lg overflow-hidden">
-                        <div class="bg-gray-200 px-4 py-2 font-bold text-lg text-center">BMW X1</div>
-                        <table class="w-full text-center">
-                            <tbody>
-                                <tr class="border-b border-t border-gray-400">
-                                    <td class="py-2 px-1 border-r w-1/2 border-gray-400">La grande blanche</td>
-                                    <td class="py-2 px-1">2021</td>
-                                </tr>
-                                <tr class="border-b border-gray-400">
-                                    <td class="py-2 px-1 border-r border-gray-400">Crochet d'attelage</td>
-                                    <td class="py-2 px-1">Stop-Start</td>
-                                </tr>
-                                <tr class="border-b border-gray-400">
-                                    <td class="py-2 px-1 border-r border-gray-400">Radar d'obstacles avant-arrière</td>
-                                    <td class="py-2 px-1">Phares et essuie-glace auto</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2 px-1 border-r border-gray-400">Caméra de recul</td>
-                                    <td class="py-2 px-1">Longueur : 4,4 m</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <!-- BMW -->
+                <div class="border border-gray-400 rounded-lg overflow-hidden">
+                    <div class="bg-gray-200 px-4 py-2 font-bold text-lg text-center">BMW X1</div>
+                    <table class="w-full text-center">
+                        <tbody>
+                            <tr class="border-b border-t border-gray-400">
+                                <td class="py-2 px-1 border-r w-1/2 border-gray-400">La grande blanche</td>
+                                <td class="py-2 px-1">2021</td>
+                            </tr>
+                            <tr class="border-b border-gray-400">
+                                <td class="py-2 px-1 border-r border-gray-400">Crochet d'attelage</td>
+                                <td class="py-2 px-1">Stop-Start</td>
+                            </tr>
+                            <tr class="border-b border-gray-400">
+                                <td class="py-2 px-1 border-r border-gray-400">Radar d'obstacles avant-arrière</td>
+                                <td class="py-2 px-1">Phares et essuie-glace auto</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-1 border-r border-gray-400">Caméra de recul</td>
+                                <td class="py-2 px-1">Longueur : 4,4 m</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
