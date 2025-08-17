@@ -8,7 +8,40 @@ nav_active: lieux
         <h1 class="text-4xl font-extrabold tracking-tight text-zinc-900 xl:text-6xl text-center mb-6 xl:mb-10">
             <span class="text-red-700">Lieux de rendez-vous</span>
         </h1>
-        <img src="{{'/assets/img/pages/lieux.jpg' | relative_url}}" class="rounded-xl mb-4 md:mb-8 lg:mb-0"
+        <img src="{{'/assets/img/pages/lieux.jpg' | relative_url}}" class="rounded-xl mb-4 md:mb-8"
             alt="Lieux de rendez-vous">
+    </div>
+
+    <!-- Content -->
+    <div class="max-w-6xl mx-auto">
+        <div class="text-justify lg:text-lg">
+            <p>Lorsque vous prenez rendez-vous pour une leçon de conduite, le moniteur vous donne un lieu de rendez-vous
+                proche d’où vous habitez ou travaillez. Il est également possible de choisir un autre lieu. Les lieux de
+                rendez-vous de base sont les suivants:</p>
+        </div>
+
+        <div class="mt-6">
+            <!-- Sélecteur de carte -->
+            <div class="mb-6">
+                <select id="mapSelector"
+                    class="min-w-3xs p-2 border border-gray-200 rounded-lg focus:ring-1 focus:ring-gray-700 focus:border-gray-700 transition-all">
+                    <option value="" disabled selected>Choisissez une carte...</option>
+                    {% for map in site.data.maps %}
+                    <option value="{{ map.id }}">{{ map.title }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <!-- Conteneur de carte -->
+            <div class="p-3 rounded-lg border border-gray-200">
+                {% for map in site.data.maps %}
+                <div id="tab-{{ map.id }}" class="map-content {% unless forloop.first %}hidden{% endunless %}">
+                    <iframe src="https://www.google.com/maps/d/embed?mid={{ map.embed_id }}&noprof=1"
+                        class="w-full h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] border-0" loading="lazy"
+                        allowfullscreen></iframe>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
