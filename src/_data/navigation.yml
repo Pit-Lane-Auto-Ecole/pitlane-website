@@ -48,8 +48,8 @@
       nav_active: "vehicles-moto"
 
 - title: "Lieux"
-  url: "#"
-  nav_active: "places"
+  url: "/pages/lieux.html"
+  nav_active: "lieux"
 
 - title: "Tarifs"
   url: "/pages/tarifs.html"
