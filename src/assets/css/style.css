@@ -9,3 +9,20 @@
 .active {
     color: #c10007;
 }
+
+.swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 64px !important;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    background: #6b7280;
+}
+
+.swiper-pagination-bullet-active {
+    background: #030712 !important;
+}
