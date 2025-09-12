@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const swiper = new Swiper(".centered-slide-carousel", {
+    const priceCarousel = new Swiper(".price-carousel", {
         centeredSlides: false,
         paginationClickable: true,
         loop: true,
@@ -9,21 +9,37 @@ document.addEventListener("DOMContentLoaded", function () {
             delay: 5000,
         },
         pagination: {
-            el: ".centered-slide-carousel .swiper-pagination",
+            el: ".price-carousel .swiper-pagination",
             clickable: true,
         },
         breakpoints: {
             1024: {
                 slidesPerView: 3,
-                spaceBetween: 30
+                spaceBetween: 30,
             },
             768: {
                 slidesPerView: 2,
-                spaceBetween: 30
+                spaceBetween: 30,
             },
             400: {
-                slidesPerView: 1
-            }
-        }
+                slidesPerView: 1,
+            },
+        },
+    });
+
+    const mainCarousel = new Swiper(".main-carousel", {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+        },
+        navigation: {
+            nextEl: ".main-carousel .swiper-button-next",
+            prevEl: ".main-carousel .swiper-button-prev",
+        },
+        pagination: {
+            el: ".main-carousel .swiper-pagination",
+            clickable: true,
+        },
     });
 });

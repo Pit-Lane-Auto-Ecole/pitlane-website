@@ -2,91 +2,108 @@
 layout: default
 ---
 
-<div id="controls-carousel" class="relative w-full" data-carousel="static">
-    <!-- Carousel wrapper -->
-    <div
-        class="relative h-40 sm:min-h-64 md:min-h-[22rem] lg:min-h-[30rem] xl:min-h-[38rem] 2xl:min-h-[calc(100vh-160px)] overflow-hidden">
-        <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-            <img src="{{ 'assets/img/carousel/yaris.jpg' | relative_url }}"
-                class="absolute block w-full -translate-x-1/2 -translate-y-[55%] top-1/2 left-1/2" alt="Yaris">
+<svg width="0" height="0" style="position:absolute">
+    <defs>
+        <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="rgba(0,0,0,0.1)" />
+        </filter>
+    </defs>
+</svg>
+
+<!-- Main carousel -->
+<div class="w-full relative">
+    <div class="swiper main-carousel swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div
+                    class="relative h-40 sm:min-h-64 md:min-h-[23rem] lg:min-h-[31rem] xl:min-h-[39rem] 2xl:min-h-[calc(100vh-160px)] overflow-hidden">
+                    <img src="{{ 'assets/img/carousel/yaris.jpg' | relative_url }}"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-[55%] top-1/2 left-1/2" alt="Yaris">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div
+                    class="relative h-40 sm:min-h-64 md:min-h-[23rem] lg:min-h-[31rem] xl:min-h-[39rem] 2xl:min-h-[calc(100vh-160px)] overflow-hidden">
+                    <img src="{{ 'assets/img/carousel/bmw.jpg' | relative_url }}"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-[60%] top-1/2 left-1/2 lg:-translate-y-[59%] xl:-translate-y-[55%] 2xl:-translate-y-[62%]"
+                        alt="Bmw">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div
+                    class="relative h-40 sm:min-h-64 md:min-h-[23rem] lg:min-h-[31rem] xl:min-h-[39rem] 2xl:min-h-[calc(100vh-160px)] overflow-hidden">
+                    <img src="{{ 'assets/img/carousel/mercedes.jpg' | relative_url }}"
+                        class="absolute block w-full -translate-x-1/2 top-1/2 left-1/2 -translate-y-[58%] md:-translate-y-[60%] xl:-translate-y-[50%] 2xl:-translate-y-[60%]"
+                        alt="Mercedes">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div
+                    class="relative h-40 sm:min-h-64 md:min-h-[23rem] lg:min-h-[31rem] xl:min-h-[39rem] 2xl:min-h-[calc(100vh-160px)] overflow-hidden">
+                    <img src="{{ 'assets/img/carousel/remorque.jpg' | relative_url }}"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Remorque">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div
+                    class="relative h-40 sm:min-h-64 md:min-h-[23rem] lg:min-h-[31rem] xl:min-h-[39rem] 2xl:min-h-[calc(100vh-160px)] overflow-hidden">
+                    <img src="{{ 'assets/img/carousel/honda.jpg' | relative_url }}"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Honda">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div
+                    class="relative h-40 sm:min-h-64 md:min-h-[23rem] lg:min-h-[31rem] xl:min-h-[39rem] 2xl:min-h-[calc(100vh-160px)] overflow-hidden">
+                    <img src="{{ 'assets/img/carousel/triumph.jpg' | relative_url }}"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-[54%] top-1/2 left-1/2 md:-translate-y-[57%] lg:-translate-y-[54%]"
+                        alt="Triumph">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div
+                    class="relative h-40 sm:min-h-64 md:min-h-[23rem] lg:min-h-[31rem] xl:min-h-[39rem] 2xl:min-h-[calc(100vh-160px)] overflow-hidden">
+                    <img src="{{ 'assets/img/carousel/trott.jpg' | relative_url }}"
+                        class="absolute block w-full -translate-x-1/2 -translate-y-[50%] top-1/2 left-1/2 md:-translate-y-[55%]"
+                        alt="Trott">
+                </div>
+            </div>
         </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <img src="{{ 'assets/img/carousel/bmw.jpg' | relative_url }}"
-                class="absolute block w-full -translate-x-1/2 -translate-y-[60%] top-1/2 left-1/2 lg:-translate-y-[59%] xl:-translate-y-[55%] 2xl:-translate-y-[62%]"
-                alt="Bmw">
+        <div class="flex items-center gap-8 lg:justify-start justify-center">
+            <button id="slider-button-left"
+                class="swiper-button-prev group !p-2 flex justify-center items-center bg-white/75 !w-12 !h-12 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8 !left-5 hover:bg-red-700"
+                data-carousel-prev>
+                <svg class="h-5 w-5 text-red-700 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button id="slider-button-right"
+                class="swiper-button-next group !p-2 flex justify-center items-center bg-white/75 !w-12 !h-12 transition-all duration-500 rounded-full !top-2/4 !-translate-y-8  !right-5 hover:bg-red-700"
+                data-carousel-next>
+                <svg class="h-5 w-5 text-red-700 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
         </div>
-        <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <img src="{{ 'assets/img/carousel/mercedes.jpg' | relative_url }}"
-                class="absolute block w-full -translate-x-1/2 top-1/2 left-1/2 -translate-y-[58%] md:-translate-y-[60%] xl:-translate-y-[50%] 2xl:-translate-y-[60%]"
-                alt="Mercedes">
-        </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <img src="{{ 'assets/img/carousel/remorque.jpg' | relative_url }}"
-                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Remorque">
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <img src="{{ 'assets/img/carousel/honda.jpg' | relative_url }}"
-                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Honda">
-        </div>
-        <!-- Item 6 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <img src="{{ 'assets/img/carousel/triumph.jpg' | relative_url }}"
-                class="absolute block w-full -translate-x-1/2 -translate-y-[54%] top-1/2 left-1/2 md:-translate-y-[57%] lg:-translate-y-[54%]"
-                alt="Triumph">
-        </div>
-        <!-- Item 7 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="">
-            <img src="{{ 'assets/img/carousel/trott.jpg' | relative_url }}"
-                class="absolute block w-full -translate-x-1/2 -translate-y-[50%] top-1/2 left-1/2 md:-translate-y-[55%]"
-                alt="Trott">
-        </div>
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
-    <!-- Slider controls -->
-    <button type="button"
-        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group"
-        data-carousel-prev>
-        <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
-            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M5 1 1 5l4 4" />
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button"
-        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group "
-        data-carousel-next>
-        <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
-            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="m1 9 4-4-4-4" />
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
 </div>
 
 <!-- Home text -->
-<div class="flex px-4 sm:px-8 xl:px-0 max-w-8xl mx-auto justify-center">
-    <div class="py-12 bg-white md:px-0">
+<div class="px-4 sm:px-8 xl:px-0 max-w-8xl mx-auto xl:mt-12">
+    <div class="bg-white">
         <div class="flex flex-col xl:flex-row items-center">
-            <div class="xl:w-1/2 mb-6 xl:mb-0">
-                <div class="flex w-full h-full overflow-hidden justify-center sm:px-2 xl:px-8">
+            <div class="xl:w-1/2">
+                <div class="flex overflow-hidden justify-center sm:px-2 xl:px-8">
                     <img src="{{ 'assets/img/logo2.jpg' | relative_url }}"
                         class="rounded-xl md:max-h-[30rem] lg:max-h-[40rem]" />
                 </div>
             </div>
             <div class="xl:w-1/2 xl:px-5">
-                <div class="w-full mx-auto pb-6 space-y-6 md:pr-0 md:pb-0">
+                <div class="pb-6 space-y-6">
                     <h1 class="text-3xl font-extrabold tracking-tight xl:text-5xl">
                         <span class="text-red-700">La bonne voie pour apprendre</span>
                     </h1>
@@ -184,14 +201,14 @@ layout: default
 </div>
 
 <!-- Call to action -->
-<div class="w-full h-auto max-h-[90px] overflow-hidden leading-none">
+<div class="max-h-[90px] overflow-hidden">
     <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M0 43.9999C106.667 43.9999 213.333 7.99994 320 7.99994C426.667 7.99994 533.333 43.9999 640 43.9999C746.667 43.9999 853.333 7.99994 960 7.99994C1066.67 7.99994 1173.33 43.9999 1280 43.9999C1386.67 43.9999 1440 19.0266 1440 9.01329V100H0V43.9999Z"
-            class="fill-current text-gray-200"></path>
+            class="fill-gray-200"></path>
     </svg>
 </div>
-<div class="pb-4 md:pb-8 mb-4 md:mb-8 bg-gray-200 text-black text-center">
+<div class="px-4 sm:px-8 xl:px-0 pb-4 md:pb-8 bg-gray-200 text-center">
     <h1 class="text-2xl font-extrabold tracking-tight md:text-4xl">Prenez <span class="text-red-700">rendez-vous</span>
         pour votre leçon</h1>
     <p class="text-lg md:text-xl">
@@ -204,8 +221,8 @@ layout: default
 
 <!-- Why choose us -->
 <div class="px-4 sm:px-8 xl:px-0 max-w-8xl mx-auto text-center space-y-6 mb-4 md:mb-8 lg:mb-16 mt-4 md:mt-8 lg:mt-16">
-    <div class="w-full mx-auto md:pr-0 space-y-2 md:pb-0">
-        <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl text-red-700 mx-auto">
+    <div class="w-full">
+        <h1 class="font-extrabold tracking-tight text-3xl md:text-4xl lg:text-5xl text-red-700 mb-2">
             Pourquoi Pit lane ?
         </h1>
         <p class="text-lg md:text-xl text-gray-500">
@@ -214,17 +231,10 @@ layout: default
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
         <!-- 1 -->
-        <div class="px-6 flex flex-col items-center text-center">
+        <div class="px-6 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" stroke-width="1.5"
                 stroke="currentColor" class="size-36 text-red-700">
-                <defs>
-                    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="rgba(0,0,0,0.1)" />
-                    </filter>
-                </defs>
-
                 <rect class="size-7 fill-current text-gray-200" transform="rotate(45 10 30)" filter="url(#shadow)" />
-
                 <g transform="translate(15 12) scale(0.8)">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
@@ -238,17 +248,10 @@ layout: default
             </p>
         </div>
         <!-- 2 -->
-        <div class="px-6 flex flex-col items-center text-center">
+        <div class="px-6 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" stroke-width="1.5"
                 stroke="currentColor" class="size-36 text-red-700">
-                <defs>
-                    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="rgba(0,0,0,0.1)" />
-                    </filter>
-                </defs>
-
                 <rect class="size-7 fill-current text-gray-200" transform="rotate(45 10 30)" filter="url(#shadow)" />
-
                 <g transform="translate(15 12) scale(0.8)">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -262,22 +265,16 @@ layout: default
             </p>
         </div>
         <!-- 3 -->
-        <div class="px-6 flex flex-col items-center text-center">
+        <div class="px-6 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" stroke-width="1.5"
                 stroke="currentColor" class="size-36 text-red-700">
-                <defs>
-                    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="rgba(0,0,0,0.1)" />
-                    </filter>
-                </defs>
-
                 <rect class="size-7 fill-current text-gray-200" transform="rotate(45 10 30)" filter="url(#shadow)" />
-
                 <g transform="translate(15 12) scale(0.8)">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
                 </g>
             </svg>
+
             <h2 class="text-xl font-bold tracking-tight uppercase mb-2">
                 Prix Justes
             </h2>
@@ -286,17 +283,10 @@ layout: default
             </p>
         </div>
         <!-- 4 -->
-        <div class="px-6 flex flex-col items-center text-center">
+        <div class="px-6 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" stroke-width="1.5"
                 stroke="currentColor" class="size-36 text-red-700">
-                <defs>
-                    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="rgba(0,0,0,0.1)" />
-                    </filter>
-                </defs>
-
                 <rect class="size-7 fill-current text-gray-200" transform="rotate(45 10 30)" filter="url(#shadow)" />
-
                 <g transform="translate(15 12) scale(0.8)">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
@@ -310,17 +300,10 @@ layout: default
             </p>
         </div>
         <!-- 5 -->
-        <div class="px-6 flex flex-col items-center text-center">
+        <div class="px-6 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" stroke-width="1.5"
                 stroke="currentColor" class="size-36 text-red-700">
-                <defs>
-                    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="rgba(0,0,0,0.1)" />
-                    </filter>
-                </defs>
-
                 <rect class="size-7 fill-current text-gray-200" transform="rotate(45 10 30)" filter="url(#shadow)" />
-
                 <g transform="translate(15 12) scale(0.8)">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" />
@@ -334,17 +317,10 @@ layout: default
             </p>
         </div>
         <!-- 6 -->
-        <div class="px-6 flex flex-col items-center text-center">
+        <div class="px-6 flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" stroke-width="1.5"
                 stroke="currentColor" class="size-36 text-red-700">
-                <defs>
-                    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="1" dy="1" stdDeviation="1" flood-color="rgba(0,0,0,0.1)" />
-                    </filter>
-                </defs>
-
                 <rect class="size-7 fill-current text-gray-200" transform="rotate(45 10 30)" filter="url(#shadow)" />
-
                 <g transform="translate(15 12) scale(0.8)">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z" />
@@ -362,209 +338,206 @@ layout: default
 
 <!-- Price carousel -->
 <div class="mt-4 md:mt-8 lg:mt-16 md:pb-2 px-4 sm:px-8 xl:px-0 max-w-8xl mx-auto">
-    <div class="mx-auto px-8 md:px-16">
-        <div class="w-full mx-auto space-y-2 text-center mb-6">
-            <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl text-red-700 mx-auto">
+    <div class="px-8 md:px-16">
+        <div class="w-full space-y-2 text-center mb-6">
+            <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl text-red-700">
                 Nos tarifs
             </h1>
             <p class="text-lg md:text-xl text-gray-500">
                 N'hésites pas à nous contacter si quelque chose n'est pas clair
             </p>
         </div>
-        <div class="mx-auto">
-            <!-- Swiper carousel -->
-            <div class="swiper centered-slide-carousel swiper-container relative">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                            <table class="w-full text-left">
-                                <tbody>
-                                    <tr class="border-b border-gray-400 bg-gray-200">
-                                        <td colspan="2" class="py-2 px-2 font-semibold">Tarifs auto-école (B)</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2 font-semibold">Cours automatique / manuelle :</td>
-                                        <td class="py-1 px-2 text-right"></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">1 cours (50 minutes)</td>
-                                        <td class="py-1 px-2 text-right">100 CHF</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">2 cours (100 minutes)</td>
-                                        <td class="py-1 px-2 text-right">200 CHF</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">Assurance</td>
-                                        <td class="py-1 px-2 text-right">Gratuite</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">2 cours découverte (100 minutes)</td>
-                                        <td class="py-1 px-2 text-right">160 CHF</td>
-                                    </tr>
-                                    <tr class="border-gray-400 border-t">
-                                        <td class="py-1 px-2 font-semibold">Forfait examen pratique :</td>
-                                        <td class="py-1 px-2 text-right">240 CHF</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2" colspan="2">
-                                            60 minutes de cours avant l’examen<br>
-                                            Durée de l’examen et retour au lieu de RDV
-                                        </td>
-                                    </tr>
-                                    <tr class="border-gray-400 border-t">
-                                        <td class="py-1 px-2 font-semibold">Forfait démarrage : (1x)</td>
-                                        <td class="py-1 px-2 text-right">380 CHF</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2" colspan="2">
-                                            2 leçons en voiture<br>
-                                            Cours de sensibilisation
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="swiper-slide space-y-6">
-                        <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                            <table class="w-full text-left">
-                                <tbody>
-                                    <tr class="border-b border-gray-400 bg-gray-200">
-                                        <td colspan="2" class="py-2 px-2 font-semibold">Tarifs samaritain</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">Cours obligatoires (10 heures)</td>
-                                        <td class="py-1 px-2 text-right">130 CHF</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                            <table class="w-full text-left">
-                                <tbody>
-                                    <tr class="border-b border-gray-400 bg-gray-200">
-                                        <td colspan="2" class="py-2 px-2 font-semibold">Tarifs sensibilisation</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">Cours théoriques obligatoires (8 heures)</td>
-                                        <td class="py-1 px-2 text-right">200 CHF</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                            <table class="w-full text-left">
-                                <tbody>
-                                    <tr class="border-b border-gray-400 bg-gray-200">
-                                        <td colspan="2" class="py-2 px-2 font-semibold">Tarifs remorque (BE)</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">Cours automatique avec remorque : 1h15</td>
-                                        <td class="py-1 px-2 text-right">170 CHF</td>
-                                    </tr>
-                                    <tr class="border-gray-400 border-t">
-                                        <td class="py-1 px-2 font-semibold">Forfait examen pratique :</td>
-                                        <td class="py-1 px-2 text-right">290 CHF</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2" colspan="2">
-                                            75 minutes de cours avant l’examen<br>
-                                            Durée de l’examen
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                            <table class="w-full text-left">
-                                <tbody>
-                                    <tr class="border-b border-gray-400 bg-gray-200">
-                                        <td colspan="2" class="py-2 px-2 font-semibold">Tarifs moto-école (A1 et A35)
-                                        </td>
-                                    </tr>
-                                    <tr class="py-1 px-2">
-                                        <td colspan="2" class="py-1 px-2 font-semibold">Cours pratiques
-                                            obligatoires :</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">4 heures</td>
-                                        <td class="py-1 px-2 text-right">180 CHF</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">12 heures</td>
-                                        <td class="py-1 px-2 text-right">550 CHF</td>
-                                    </tr>
-                                    <tr class="border-gray-400 border-t">
-                                        <td class="py-1 px-2">Cours individuel (50 min avec votre 2 roues)</td>
-                                        <td class="py-1 px-2 text-right">90 CHF</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">Cours initiation (60 min avec moto de loc.)</td>
-                                        <td class="py-1 px-2 text-right">120 CHF</td>
-                                    </tr>
-                                    <tr class="border-gray-400 border-t">
-                                        <td class="py-1 px-2 font-semibold">Location moto :</td>
-                                        <td class="py-1 px-2 text-right">120 CHF</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2" colspan="2">
-                                            Pour les 12 heures obligatoires (permis A1)
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                            <table class="w-full text-left">
-                                <tbody>
-                                    <tr class="border-b border-gray-400 bg-gray-200">
-                                        <td colspan="2" class="py-2 px-2 font-semibold">Tarifs trott-école</td>
-                                    </tr>
-                                    <tr class="py-1 px-2">
-                                        <td colspan="2" class="py-1 px-2 font-semibold">Stage 1 :</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">3 heures (avec votre trottinette)</td>
-                                        <td class="py-1 px-2 text-right">80 CHF</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">3 heure (avec trottinette de loc.)</td>
-                                        <td class="py-1 px-2 text-right">100 CHF</td>
-                                    </tr>
-                                    <tr class="border-gray-400 border-t">
-                                        <td colspan="2" class="py-1 px-2 font-semibold">Cours individuels :</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">1h15 (avec votre trottinette)</td>
-                                        <td class="py-1 px-2 text-right">110 CHF</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-1 px-2">1h15 (avec trottinette de loc.)</td>
-                                        <td class="py-1 px-2 text-right">130 CHF</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+        <!-- Swiper carousel -->
+        <div class="swiper price-carousel swiper-container relative">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                        <table class="w-full text-left">
+                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                                <tr class="border-b border-gray-400 bg-gray-200">
+                                    <td colspan="2" class="font-semibold">Tarifs auto-école (B)</td>
+                                </tr>
+                                <tr>
+                                    <td class="font-semibold">Cours automatique / manuelle :</td>
+                                    <td class="text-right"></td>
+                                </tr>
+                                <tr>
+                                    <td>1 cours (50 minutes)</td>
+                                    <td class="text-right">100 CHF</td>
+                                </tr>
+                                <tr>
+                                    <td>2 cours (100 minutes)</td>
+                                    <td class="text-right">200 CHF</td>
+                                </tr>
+                                <tr>
+                                    <td>Assurance</td>
+                                    <td class="text-right">Gratuite</td>
+                                </tr>
+                                <tr>
+                                    <td>2 cours découverte (100 minutes)</td>
+                                    <td class=" text-right">160 CHF</td>
+                                </tr>
+                                <tr class="border-gray-400 border-t">
+                                    <td class="font-semibold">Forfait examen pratique :</td>
+                                    <td class="text-right">240 CHF</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        60 minutes de cours avant l’examen<br>
+                                        Durée de l’examen et retour au lieu de RDV
+                                    </td>
+                                </tr>
+                                <tr class="border-gray-400 border-t">
+                                    <td class="font-semibold">Forfait démarrage : (1x)</td>
+                                    <td class="text-right">380 CHF</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        2 leçons en voiture<br>
+                                        Cours de sensibilisation
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <div class="swiper-pagination mb-4"></div>
+                <div class="swiper-slide space-y-6">
+                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                        <table class="w-full text-left">
+                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                                <tr class="border-b border-gray-400 bg-gray-200">
+                                    <td colspan="2" class="font-semibold">Tarifs samaritain</td>
+                                </tr>
+                                <tr>
+                                    <td>Cours obligatoires (10 heures)</td>
+                                    <td class="text-right">130 CHF</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                        <table class="w-full text-left">
+                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                                <tr class="border-b border-gray-400 bg-gray-200">
+                                    <td colspan="2" class="font-semibold">Tarifs sensibilisation</td>
+                                </tr>
+                                <tr>
+                                    <td>Cours théoriques obligatoires (8 heures)</td>
+                                    <td class="text-right">200 CHF</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                        <table class="w-full text-left">
+                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                                <tr class="border-b border-gray-400 bg-gray-200">
+                                    <td colspan="2" class="font-semibold">Tarifs remorque (BE)</td>
+                                </tr>
+                                <tr>
+                                    <td>Cours automatique avec remorque : 1h15</td>
+                                    <td class="text-right">170 CHF</td>
+                                </tr>
+                                <tr class="border-gray-400 border-t">
+                                    <td class="font-semibold">Forfait examen pratique :</td>
+                                    <td class="text-right">290 CHF</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        75 minutes de cours avant l’examen<br>
+                                        Durée de l’examen
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                        <table class="w-full text-left">
+                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                                <tr class="border-b border-gray-400 bg-gray-200">
+                                    <td colspan="2" class="font-semibold">Tarifs moto-école (A1 et A35)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="font-semibold">Cours pratiques
+                                        obligatoires :</td>
+                                </tr>
+                                <tr>
+                                    <td>4 heures</td>
+                                    <td class="text-right">180 CHF</td>
+                                </tr>
+                                <tr>
+                                    <td>12 heures</td>
+                                    <td class="text-right">550 CHF</td>
+                                </tr>
+                                <tr class="border-gray-400 border-t">
+                                    <td>Cours individuel (50 min avec votre 2 roues)</td>
+                                    <td class="text-right">90 CHF</td>
+                                </tr>
+                                <tr>
+                                    <td>Cours initiation (60 min avec moto de loc.)</td>
+                                    <td class="text-right">120 CHF</td>
+                                </tr>
+                                <tr class="border-gray-400 border-t">
+                                    <td class="font-semibold">Location moto :</td>
+                                    <td class="text-right">120 CHF</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        Pour les 12 heures obligatoires (permis A1)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                        <table class="w-full text-left">
+                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                                <tr class="border-b border-gray-400 bg-gray-200">
+                                    <td colspan="2" class="font-semibold">Tarifs trott-école</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="font-semibold">Stage 1 :</td>
+                                </tr>
+                                <tr>
+                                    <td>3 heures (avec votre trottinette)</td>
+                                    <td class="text-right">80 CHF</td>
+                                </tr>
+                                <tr>
+                                    <td>3 heure (avec trottinette de loc.)</td>
+                                    <td class="text-right">100 CHF</td>
+                                </tr>
+                                <tr class="border-gray-400 border-t">
+                                    <td colspan="2" class="font-semibold">Cours individuels :</td>
+                                </tr>
+                                <tr>
+                                    <td>1h15 (avec votre trottinette)</td>
+                                    <td class="text-right">110 CHF</td>
+                                </tr>
+                                <tr>
+                                    <td>1h15 (avec trottinette de loc.)</td>
+                                    <td class="text-right">130 CHF</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="flex justify-center">
-                <a href="{{'/pages/contact.html' | relative_url}}"
-                    class="flex items-center border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white lg:text-lg">
-                    Contact
-                    <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 448 512"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.8L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-                    </svg>
-                </a>
-            </div>
+            <div class="swiper-pagination mb-4"></div>
+        </div>
+        <div class="flex justify-center">
+            <a href="{{'/pages/contact.html' | relative_url}}"
+                class="flex items-center border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white lg:text-lg">
+                Contact
+                <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.8L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                </svg>
+            </a>
         </div>
     </div>
 </div>
