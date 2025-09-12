@@ -3,62 +3,59 @@ layout: default
 nav_active: courses-sensi
 ---
 
-<div class="flex px-4 sm:px-8 xl:px-0 max-w-[100rem] mx-auto justify-center">
+<div class="flex px-4 sm:px-8 xl:px-0 max-w-[100rem] mx-auto">
     <div class="py-12 bg-white md:px-0">
         <div class="flex flex-col xl:flex-row items-center">
-            <div class="w-full xl:w-1/2 mb-6 xl:mb-0">
-                <div class="flex w-full h-full overflow-hidden justify-center sm:px-2 xl:px-8">
-                    <div id="controls-carousel" class="relative w-full" data-carousel="slide">
-                        <!-- Carousel wrapper -->
-                        <div
-                            class="relative min-h-[18rem] sm:min-h-[30rem] lg:min-h-[38rem] overflow-hidden rounded-lg">
-                            <!-- Item 1 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                                <img src="{{ '/assets/img/pages/sensibilisation/1.jpg' | relative_url }}"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="Image 1">
-                            </div>
-                            <!-- Item 2 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="{{ '/assets/img/pages/sensibilisation/2.jpg' | relative_url }}"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="Image 2">
-                            </div>
-                            <!-- Item 3 -->
-                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                                <img src="{{ '/assets/img/pages/sensibilisation/3.jpg' | relative_url }}"
-                                    class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                                    alt="Image 3">
-                            </div>
+            <div class="w-full xl:w-1/2 mb-6 xl:mb-0 sm:px-2 xl:px-8">
+                <div id="controls-carousel" class="relative w-full" data-carousel="slide">
+                    <!-- Carousel wrapper -->
+                    <div class="relative min-h-[18rem] sm:min-h-[30rem] lg:min-h-[38rem] overflow-hidden rounded-lg">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                            <img src="{{ '/assets/img/pages/sensibilisation/1.jpg' | relative_url }}"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="Image 1">
                         </div>
-                        <!-- Slider controls -->
-                        <button type="button"
-                            class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group"
-                            data-carousel-prev>
-                            <span
-                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
-                                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="M5 1 1 5l4 4" />
-                                </svg>
-                                <span class="sr-only">Previous</span>
-                            </span>
-                        </button>
-                        <button type="button"
-                            class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group "
-                            data-carousel-next>
-                            <span
-                                class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
-                                <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 9 4-4-4-4" />
-                                </svg>
-                                <span class="sr-only">Next</span>
-                            </span>
-                        </button>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="{{ '/assets/img/pages/sensibilisation/2.jpg' | relative_url }}"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="Image 2">
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                            <img src="{{ '/assets/img/pages/sensibilisation/3.jpg' | relative_url }}"
+                                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                alt="Image 3">
+                        </div>
                     </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 start-0 z-30 flex items-center h-full px-4 cursor-pointer group"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center !w-12 !h-12 rounded-full bg-white/30 group-hover:bg-white/50">
+                            <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 end-0 z-30 flex items-center h-full px-4 cursor-pointer group "
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center !w-12 !h-12 rounded-full bg-white/30 group-hover:bg-white/50">
+                            <svg class="w-5 h-5 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
                 </div>
             </div>
             <div class="xl:w-1/2 xl:px-5">
