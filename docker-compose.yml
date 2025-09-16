@@ -1,0 +1,17 @@
+services:
+    jekyll:
+        build: .
+        ports:
+            - "4000:4000"
+        volumes:
+            - .:/srv/jekyll
+            - gem_cache:/usr/local/bundle
+        environment:
+            - JEKYLL_ENV=development
+        working_dir: /srv/jekyll
+        stdin_open: true
+        tty: true
+        command: bundle exec jekyll serve --force_polling --host 0.0.0.0
+
+volumes:
+    gem_cache:

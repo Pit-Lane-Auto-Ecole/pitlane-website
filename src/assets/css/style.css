@@ -1,0 +1,42 @@
+.text-primary-color {
+    color: #AD2B31;
+}
+
+.bg-primary-color {
+    background-color: #AD2B31;
+}
+
+.active {
+    color: #c10007;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 64px !important;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    background: #6b7280;
+}
+
+.swiper-pagination-bullet-active {
+    background: #030712 !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    svg {
+        object-fit: contain;
+        transform-origin: center;
+        fill: none;
+        pointer-events: none
+    }
+}
+
+.main-carousel .swiper-wrapper {
+    padding-bottom: 0 !important;
+}

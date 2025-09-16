@@ -1,0 +1,69 @@
+<!-- _layouts/default.html -->
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+
+    <!-- Flowbite CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
+<body>
+
+    {% include header.html %}
+
+    <main>
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <!-- Flowbite JS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <!-- Data loader for table -->
+    <script src="{{ 'assets/js/data-loader.js' | relative_url }}"></script>
+
+    <!-- Swiper JS for carousel -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <script src="{{ '/assets/js/swiper.js' | relative_url }}"></script>
+
+    <script>
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            if (dropdown.classList.contains('hidden')) {
+                dropdown.classList.remove('hidden');
+            } else {
+                dropdown.classList.add('hidden');
+            }
+        }
+
+        document.getElementById('mapSelector').addEventListener('change', function () {
+            const selectedMapId = this.value;
+
+            // Masquer toutes les cartes
+            document.querySelectorAll('.map-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Afficher la carte sélectionnée
+            if (selectedMapId) {
+                document.getElementById(`tab-${selectedMapId}`).classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+
+</html>

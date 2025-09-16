@@ -1,0 +1,117 @@
+---
+layout: default
+nav_active: vehicles-trailer
+---
+
+<div class="max-w-6xl mx-auto px-4 sm:px-8 py-6 xl:py-10">
+    <div class="flex flex-col items-center">
+        <h1 class="text-4xl xl:text-6xl font-extrabold text-center text-zinc-900 mb-6 xl:mb-10">
+            <span class="text-red-700">Remorque</span>
+        </h1>
+
+        <div class="w-full relative mb-6">
+            <div class="swiper main-carousel swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div
+                            class="relative min-h-[14rem] sm:min-h-[23rem] lg:min-h-[36rem] xl:min-h-[41rem] overflow-hidden rounded-xl">
+                            <img src="{{ '/assets/img/carousel/remorque.jpg' | relative_url }}"
+                                class="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                                alt="Image 1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div
+                            class="relative min-h-[14rem] sm:min-h-[23rem] lg:min-h-[36rem] xl:min-h-[41rem] overflow-hidden rounded-xl">
+                            <img src="{{ '/assets/img/pages/vehicles/remorque/2.jpg' | relative_url }}"
+                                class="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                                alt="Image 2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div
+                            class="relative min-h-[14rem] sm:min-h-[23rem] lg:min-h-[36rem] xl:min-h-[41rem] overflow-hidden rounded-xl">
+                            <img src="{{ '/assets/img/pages/remorque.jpg' | relative_url }}"
+                                class="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                                alt="Image 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center lg:justify-start justify-center">
+                    <button id="slider-button-left"
+                        class="swiper-button-prev group !p-2 flex justify-center items-center bg-white/30 hover:bg-white/50 !size-8 sm:!size-10 lg:!size-12 transition-all duration-500 rounded-full !left-2 md:!left-5 hover:bg-red-700"
+                        data-carousel-prev>
+                        <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                            fill="none">
+                            <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button id="slider-button-right"
+                        class="swiper-button-next group !p-2 flex justify-center items-center bg-white/30 hover:bg-white/50 !size-8 sm:!size-10 lg:!size-12 transition-all duration-500 rounded-full !right-2 md:!right-5 hover:bg-red-700"
+                        data-carousel-next>
+                        <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                            fill="none">
+                            <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 mx-auto items-start">
+                <!-- Bloc 1 -->
+                <div class="border border-gray-400 rounded-lg overflow-hidden">
+                    <div class="bg-gray-200 px-4 py-2 font-bold lg:text-lg text-center">Description</div>
+                    <table class="w-full text-center">
+                        <tbody class="[&>tr>td]:px-1 [&>tr>td]:py-2">
+                            <tr class="border-b border-t border-gray-400">
+                                <td class="border-r w-1/2 border-gray-400">Marque</td>
+                                <td>WM Meyer</td>
+                            </tr>
+                            <tr class="border-b border-gray-400">
+                                <td class="border-r border-gray-400">Modèle</td>
+                                <td>AZ 2030/151</td>
+                            </tr>
+                            <tr>
+                                <td class="border-r border-gray-400">Année</td>
+                                <td>2016</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Bloc 2 -->
+                <div class="border border-gray-400 rounded-lg overflow-hidden">
+                    <div class="bg-gray-200 px-4 py-2 font-bold lg:text-lg text-center">Dimensions</div>
+                    <table class="w-full text-center">
+                        <tbody class="[&>tr>td]:px-1 [&>tr>td]:py-2">
+                            <tr class="border-b border-t border-gray-400">
+                                <td class="border-r w-1/2 border-gray-400">Longueur</td>
+                                <td>4,4m</td>
+                            </tr>
+                            <tr class="border-b border-gray-400">
+                                <td class="border-r border-gray-400">Largeur</td>
+                                <td>2m</td>
+                            </tr>
+                            <tr class="border-b border-gray-400">
+                                <td class="border-r border-gray-400">Hauteur</td>
+                                <td>2,5m</td>
+                            </tr>
+                            <tr class="border-b border-gray-400">
+                                <td class="border-r border-gray-400">Poids total</td>
+                                <td>2'000kg</td>
+                            </tr>
+                            <tr>
+                                <td class="border-r border-gray-400">Poids effectif</td>
+                                <td>840kg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

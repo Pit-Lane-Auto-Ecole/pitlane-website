@@ -1,0 +1,27 @@
+---
+layout: default
+nav_active: contact
+---
+
+<div class="max-w-7xl px-8 mx-auto xl:px-5 py-6 xl:py-10">
+    <div class="flex flex-col justify-center">
+        <h1 class="text-4xl font-extrabold tracking-tight text-zinc-900 xl:text-6xl text-center mb-6 xl:mb-10">
+            <span class="text-red-700">Contact & Inscription</span>
+        </h1>
+        <img src="{{'/assets/img/pages/contact.jpg' | relative_url}}" class="rounded-xl mb-4 md:mb-8 lg:mb-0"
+            alt="Les Cours">
+
+        <div class="flex justify-center">
+            <iframe id="JotFormIFrame-251770479203357" title="Formulaire d'inscription"
+                onload="window.parent.scrollTo(0,0)" allowtransparency="true"
+                allow="geolocation; microphone; camera; fullscreen; payment"
+                src="https://form.jotform.com/251770479203357" frameborder="0" scrolling="no" class="w-full">
+            </iframe>
+
+            <script src="https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js"></script>
+            <script>
+                window.jotformEmbedHandler("iframe[id='JotFormIFrame-251770479203357']", "https://form.jotform.com/")
+            </script>
+        </div>
+    </div>
+</div>

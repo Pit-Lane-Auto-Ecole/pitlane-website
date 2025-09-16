@@ -1,0 +1,88 @@
+---
+layout: default
+nav_active: monitor
+---
+
+<div class="max-w-6xl mx-auto px-4 sm:px-8 py-6 md:py-12 xl:py-16">
+    <div class="flex flex-col items-center">
+        <!-- Carousel -->
+        <div class="w-full max-w-6xl relative mb-6">
+            <div class="swiper main-carousel swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div
+                            class="relative min-h-[7rem] sm:min-h-[13rem] lg:min-h-[22rem] xl:min-h-[25rem] overflow-hidden rounded-xl">
+                            <img src="{{ '/assets/img/pages/monitor/carousel1.jpg' | relative_url }}"
+                                class="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                                alt="Image 1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div
+                            class="relative min-h-[7rem] sm:min-h-[13rem] lg:min-h-[22rem] xl:min-h-[25rem] overflow-hidden rounded-xl">
+                            <img src="{{ '/assets/img/pages/monitor/carousel2.jpg' | relative_url }}"
+                                class="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                                alt="Image 2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div
+                            class="relative min-h-[7rem] sm:min-h-[13rem] lg:min-h-[22rem] xl:min-h-[25rem] overflow-hidden rounded-xl">
+                            <img src="{{ '/assets/img/pages/monitor/carousel3.jpg' | relative_url }}"
+                                class="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2"
+                                alt="Image 3">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center lg:justify-start justify-center">
+                    <button id="slider-button-left"
+                        class="swiper-button-prev group !p-2 flex justify-center items-center bg-white/30 hover:bg-white/50 !size-8 sm:!size-10 lg:!size-12 transition-all duration-500 rounded-full !left-2 md:!left-5 hover:bg-red-700"
+                        data-carousel-prev>
+                        <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                            fill="none">
+                            <path d="M10.0002 11.9999L6 7.99971L10.0025 3.99719" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button id="slider-button-right"
+                        class="swiper-button-next group !p-2 flex justify-center items-center bg-white/30 hover:bg-white/50 !size-8 sm:!size-10 lg:!size-12 transition-all duration-500 rounded-full !right-2 md:!right-5 hover:bg-red-700"
+                        data-carousel-next>
+                        <svg class="h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                            fill="none">
+                            <path d="M5.99984 4.00012L10 8.00029L5.99748 12.0028" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="w-full max-w-6xl space-y-4 md:space-y-8">
+            <h1 class="text-4xl xl:text-6xl font-extrabold tracking-tight text-zinc-900 text-center md:text-left">
+                <span>Le </span><span class="text-red-700">Moniteur</span>
+            </h1>
+
+            <div class="flex flex-col text-justify space-y-3 lg:text-lg">
+                <p>Je m’appelle Maxime Perrin. J’ai 39 ans et habite à Nyon depuis ma naissance.</p>
+                <p>Je suis dynamique, motivé et passionné. Après avoir passé quatre ans sur la route en camion
+                    remorque, j’ai entamé ma formation de moniteur de conduite et obtenu mon brevet fédéral en
+                    novembre 2010. En activité depuis dans la région de la côte, je me ferais un plaisir de vous
+                    accueillir lors de l’un de mes cours.</p>
+                <p class="flex justify-end text-base text-gray-500">Maxime Perrin</p>
+            </div>
+
+            <div class="flex">
+                <a href="{{'/pages/contact.html' | relative_url}}"
+                    class="flex items-center border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white lg:text-lg">
+                    Contactez moi
+                    <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 448 512"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.8L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
