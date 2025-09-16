@@ -30,9 +30,6 @@ jobs:
           ruby-version: '3.2'
           bundler-cache: true
 
-      - name: Add Linux platform to Bundler
-        run: bundle lock --add-platform x86_64-linux
-
       - name: Install dependencies
         run: bundle install
 
