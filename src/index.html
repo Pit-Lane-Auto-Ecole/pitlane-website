@@ -218,8 +218,101 @@ layout: default
     </p>
 </div>
 
+<!-- Course carousel -->
+<div class="mt-4 md:mt-8 lg:mt-16 md:pb-2 px-4 sm:px-8 xl:px-6 max-w-screen-xl mx-auto">
+    <div class="w-full text-center mb-6">
+        <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl text-red-700">
+            Nos cours
+        </h1>
+    </div>
+    <!-- Swiper carousel -->
+    <div class="swiper course-carousel swiper-container relative">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="text-center space-y-4">
+                    <img src="{{ 'assets/img/pages/vehicles/automatic/1.jpg' | relative_url }}"
+                        class="rounded-xl w-full object-cover max-w-md mx-auto h-48 sm:h-64" alt="Yaris">
+                    <span class="text-3xl font-semibold">Auto-école</span>
+                    <div class="flex justify-center mt-4">
+                        <a href="{{'/pages/courses/auto-ecole.html' | relative_url}}"
+                            class="flex border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="text-center space-y-4">
+                    <img src="{{ 'assets/img/pages/monitor/carousel3.jpg' | relative_url }}"
+                        class="rounded-xl w-full object-cover max-w-md mx-auto h-48 sm:h-64" alt="Moto-école">
+                    <span class="text-3xl font-semibold">Moto-école</span>
+                    <div class="flex justify-center mt-4">
+                        <a href="{{'/pages/courses/moto-ecole.html' | relative_url}}"
+                            class="flex border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="text-center space-y-4">
+                    <img src="{{ 'assets/img/carousel/remorque.jpg' | relative_url }}"
+                        class="rounded-xl w-full object-cover max-w-md mx-auto h-48 sm:h-64" alt="Remorque">
+                    <span class="text-3xl font-semibold">Remorque</span>
+                    <div class="flex justify-center mt-4">
+                        <a href="{{'/pages/courses/remorque.html' | relative_url}}"
+                            class="flex border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="text-center space-y-4">
+                    <img src="{{ 'assets/img/pages/sensibilisation/sensibilisation.jpg' | relative_url }}"
+                        class="rounded-xl w-full object-cover max-w-md mx-auto h-48 sm:h-64" alt="Sensibilisation">
+                    <span class="text-3xl font-semibold">Sensibilisation</span>
+                    <div class="flex justify-center mt-4">
+                        <a href="{{'/pages/courses/sensibilisation.html' | relative_url}}"
+                            class="flex border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="text-center space-y-4">
+                    <img src="{{ 'assets/img/pages/trott-ecole.jpg' | relative_url }}"
+                        class="rounded-xl w-full object-cover max-w-md mx-auto h-48 sm:h-64" alt="Trott-école">
+                    <span class="text-3xl font-semibold">Trott-école</span>
+                    <div class="flex justify-center mt-4">
+                        <a href="{{'/pages/courses/trott-ecole.html' | relative_url}}"
+                            class="flex border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="text-center space-y-4">
+                    <img src="{{ 'assets/img/pages/samaritain.jpg' | relative_url }}"
+                        class="rounded-xl w-full object-cover max-w-md mx-auto h-48 sm:h-64" alt="Samaritain">
+                    <span class="text-3xl font-semibold">Samaritain</span>
+                    <div class="flex justify-center mt-4">
+                        <a href="{{'/pages/courses/samaritain.html' | relative_url}}"
+                            class="flex border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination mb-4"></div>
+    </div>
+</div>
+
 <!-- Why choose us -->
-<div class="px-4 sm:px-8 xl:px-0 max-w-8xl mx-auto text-center space-y-6 mb-4 md:mb-8 lg:mb-16 mt-4 md:mt-8 lg:mt-16">
+<div class="px-4 sm:px-8 xl:px-0 max-w-8xl mx-auto text-center space-y-6 mb-4 md:mb-8 lg:mb-16 mt-4 md:mt-8">
     <div class="w-full">
         <h1 class="font-extrabold tracking-tight text-3xl md:text-4xl lg:text-5xl text-red-700 mb-2">
             Pourquoi Pit lane ?
@@ -336,207 +429,205 @@ layout: default
 </div>
 
 <!-- Price carousel -->
-<div class="mt-4 md:mt-8 lg:mt-16 md:pb-2 px-4 sm:px-8 xl:px-0 max-w-8xl mx-auto">
-    <div class="px-8 md:px-16">
-        <div class="w-full space-y-2 text-center mb-6">
-            <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl text-red-700">
-                Nos tarifs
-            </h1>
-            <p class="text-lg md:text-xl text-gray-500">
-                N'hésites pas à nous contacter si quelque chose n'est pas clair
-            </p>
-        </div>
-        <!-- Swiper carousel -->
-        <div class="swiper price-carousel swiper-container relative">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                        <table class="w-full text-left">
-                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
-                                <tr class="border-b border-gray-400 bg-gray-200">
-                                    <td colspan="2" class="font-semibold">Tarifs auto-école (B)</td>
-                                </tr>
-                                <tr>
-                                    <td class="font-semibold">Cours automatique / manuelle :</td>
-                                    <td class="text-right"></td>
-                                </tr>
-                                <tr>
-                                    <td>1 cours (50 minutes)</td>
-                                    <td class="text-right">100 CHF</td>
-                                </tr>
-                                <tr>
-                                    <td>2 cours (100 minutes)</td>
-                                    <td class="text-right">200 CHF</td>
-                                </tr>
-                                <tr>
-                                    <td>Assurance</td>
-                                    <td class="text-right">Gratuite</td>
-                                </tr>
-                                <tr>
-                                    <td>2 cours découverte (100 minutes)</td>
-                                    <td class=" text-right">160 CHF</td>
-                                </tr>
-                                <tr class="border-gray-400 border-t">
-                                    <td class="font-semibold">Forfait examen pratique :</td>
-                                    <td class="text-right">240 CHF</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        60 minutes de cours avant l’examen<br>
-                                        Durée de l’examen et retour au lieu de RDV
-                                    </td>
-                                </tr>
-                                <tr class="border-gray-400 border-t">
-                                    <td class="font-semibold">Forfait démarrage : (1x)</td>
-                                    <td class="text-right">380 CHF</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        2 leçons en voiture<br>
-                                        Cours de sensibilisation
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="swiper-slide space-y-6">
-                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                        <table class="w-full text-left">
-                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
-                                <tr class="border-b border-gray-400 bg-gray-200">
-                                    <td colspan="2" class="font-semibold">Tarifs samaritain</td>
-                                </tr>
-                                <tr>
-                                    <td>Cours obligatoires (10 heures)</td>
-                                    <td class="text-right">130 CHF</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                        <table class="w-full text-left">
-                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
-                                <tr class="border-b border-gray-400 bg-gray-200">
-                                    <td colspan="2" class="font-semibold">Tarifs sensibilisation</td>
-                                </tr>
-                                <tr>
-                                    <td>Cours théoriques obligatoires (8 heures)</td>
-                                    <td class="text-right">200 CHF</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                        <table class="w-full text-left">
-                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
-                                <tr class="border-b border-gray-400 bg-gray-200">
-                                    <td colspan="2" class="font-semibold">Tarifs remorque (BE)</td>
-                                </tr>
-                                <tr>
-                                    <td>Cours automatique avec remorque : 1h15</td>
-                                    <td class="text-right">170 CHF</td>
-                                </tr>
-                                <tr class="border-gray-400 border-t">
-                                    <td class="font-semibold">Forfait examen pratique :</td>
-                                    <td class="text-right">290 CHF</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        75 minutes de cours avant l’examen<br>
-                                        Durée de l’examen
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                        <table class="w-full text-left">
-                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
-                                <tr class="border-b border-gray-400 bg-gray-200">
-                                    <td colspan="2" class="font-semibold">Tarifs moto-école (A1 et A35)
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="font-semibold">Cours pratiques
-                                        obligatoires :</td>
-                                </tr>
-                                <tr>
-                                    <td>4 heures</td>
-                                    <td class="text-right">180 CHF</td>
-                                </tr>
-                                <tr>
-                                    <td>12 heures</td>
-                                    <td class="text-right">550 CHF</td>
-                                </tr>
-                                <tr class="border-gray-400 border-t">
-                                    <td>Cours individuel (50 min avec votre 2 roues)</td>
-                                    <td class="text-right">90 CHF</td>
-                                </tr>
-                                <tr>
-                                    <td>Cours initiation (60 min avec moto de loc.)</td>
-                                    <td class="text-right">120 CHF</td>
-                                </tr>
-                                <tr class="border-gray-400 border-t">
-                                    <td class="font-semibold">Location moto :</td>
-                                    <td class="text-right">120 CHF</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        Pour les 12 heures obligatoires (permis A1)
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
-                        <table class="w-full text-left">
-                            <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
-                                <tr class="border-b border-gray-400 bg-gray-200">
-                                    <td colspan="2" class="font-semibold">Tarifs trott-école</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="font-semibold">Stage 1 :</td>
-                                </tr>
-                                <tr>
-                                    <td>3 heures (avec votre trottinette)</td>
-                                    <td class="text-right">80 CHF</td>
-                                </tr>
-                                <tr>
-                                    <td>3 heure (avec trottinette de loc.)</td>
-                                    <td class="text-right">100 CHF</td>
-                                </tr>
-                                <tr class="border-gray-400 border-t">
-                                    <td colspan="2" class="font-semibold">Cours individuels :</td>
-                                </tr>
-                                <tr>
-                                    <td>1h15 (avec votre trottinette)</td>
-                                    <td class="text-right">110 CHF</td>
-                                </tr>
-                                <tr>
-                                    <td>1h15 (avec trottinette de loc.)</td>
-                                    <td class="text-right">130 CHF</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+<div class="mt-4 md:mt-8 lg:mt-16 md:pb-2 px-4 sm:px-8 xl:px-6 max-w-screen-xl mx-auto">
+    <div class="w-full space-y-2 text-center mb-6">
+        <h1 class="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl text-red-700">
+            Nos tarifs
+        </h1>
+        <p class="text-lg md:text-xl text-gray-500">
+            N'hésites pas à nous contacter si quelque chose n'est pas clair
+        </p>
+    </div>
+    <!-- Swiper carousel -->
+    <div class="swiper price-carousel swiper-container relative">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                    <table class="w-full text-left">
+                        <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                            <tr class="border-b border-gray-400 bg-gray-200">
+                                <td colspan="2" class="font-semibold">Tarifs auto-école (B)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold">Cours automatique / manuelle :</td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td>1 cours (50 minutes)</td>
+                                <td class="text-right">100 CHF</td>
+                            </tr>
+                            <tr>
+                                <td>2 cours (100 minutes)</td>
+                                <td class="text-right">200 CHF</td>
+                            </tr>
+                            <tr>
+                                <td>Assurance</td>
+                                <td class="text-right">Gratuite</td>
+                            </tr>
+                            <tr>
+                                <td>2 cours découverte (100 minutes)</td>
+                                <td class=" text-right">160 CHF</td>
+                            </tr>
+                            <tr class="border-gray-400 border-t">
+                                <td class="font-semibold">Forfait examen pratique :</td>
+                                <td class="text-right">240 CHF</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    60 minutes de cours avant l’examen<br>
+                                    Durée de l’examen et retour au lieu de RDV
+                                </td>
+                            </tr>
+                            <tr class="border-gray-400 border-t">
+                                <td class="font-semibold">Forfait démarrage : (1x)</td>
+                                <td class="text-right">380 CHF</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    2 leçons en voiture<br>
+                                    Cours de sensibilisation
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="swiper-pagination mb-4"></div>
+            <div class="swiper-slide space-y-6">
+                <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                    <table class="w-full text-left">
+                        <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                            <tr class="border-b border-gray-400 bg-gray-200">
+                                <td colspan="2" class="font-semibold">Tarifs samaritain</td>
+                            </tr>
+                            <tr>
+                                <td>Cours obligatoires (10 heures)</td>
+                                <td class="text-right">130 CHF</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                    <table class="w-full text-left">
+                        <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                            <tr class="border-b border-gray-400 bg-gray-200">
+                                <td colspan="2" class="font-semibold">Tarifs sensibilisation</td>
+                            </tr>
+                            <tr>
+                                <td>Cours théoriques obligatoires (8 heures)</td>
+                                <td class="text-right">200 CHF</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                    <table class="w-full text-left">
+                        <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                            <tr class="border-b border-gray-400 bg-gray-200">
+                                <td colspan="2" class="font-semibold">Tarifs remorque (BE)</td>
+                            </tr>
+                            <tr>
+                                <td>Cours automatique avec remorque : 1h15</td>
+                                <td class="text-right">170 CHF</td>
+                            </tr>
+                            <tr class="border-gray-400 border-t">
+                                <td class="font-semibold">Forfait examen pratique :</td>
+                                <td class="text-right">290 CHF</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    75 minutes de cours avant l’examen<br>
+                                    Durée de l’examen
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                    <table class="w-full text-left">
+                        <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                            <tr class="border-b border-gray-400 bg-gray-200">
+                                <td colspan="2" class="font-semibold">Tarifs moto-école (A1 et A35)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="font-semibold">Cours pratiques
+                                    obligatoires :</td>
+                            </tr>
+                            <tr>
+                                <td>4 heures</td>
+                                <td class="text-right">180 CHF</td>
+                            </tr>
+                            <tr>
+                                <td>12 heures</td>
+                                <td class="text-right">550 CHF</td>
+                            </tr>
+                            <tr class="border-gray-400 border-t">
+                                <td>Cours individuel (50 min avec votre 2 roues)</td>
+                                <td class="text-right">90 CHF</td>
+                            </tr>
+                            <tr>
+                                <td>Cours initiation (60 min avec moto de loc.)</td>
+                                <td class="text-right">120 CHF</td>
+                            </tr>
+                            <tr class="border-gray-400 border-t">
+                                <td class="font-semibold">Location moto :</td>
+                                <td class="text-right">120 CHF</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    Pour les 12 heures obligatoires (permis A1)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="flex justify-center items-center border border-gray-400 rounded-lg overflow-hidden">
+                    <table class="w-full text-left">
+                        <tbody class="[&>tr>td]:px-2 [&>tr>td]:py-1">
+                            <tr class="border-b border-gray-400 bg-gray-200">
+                                <td colspan="2" class="font-semibold">Tarifs trott-école</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" class="font-semibold">Stage 1 :</td>
+                            </tr>
+                            <tr>
+                                <td>3 heures (avec votre trottinette)</td>
+                                <td class="text-right">80 CHF</td>
+                            </tr>
+                            <tr>
+                                <td>3 heure (avec trottinette de loc.)</td>
+                                <td class="text-right">100 CHF</td>
+                            </tr>
+                            <tr class="border-gray-400 border-t">
+                                <td colspan="2" class="font-semibold">Cours individuels :</td>
+                            </tr>
+                            <tr>
+                                <td>1h15 (avec votre trottinette)</td>
+                                <td class="text-right">110 CHF</td>
+                            </tr>
+                            <tr>
+                                <td>1h15 (avec trottinette de loc.)</td>
+                                <td class="text-right">130 CHF</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-        <div class="flex justify-center">
-            <a href="{{'/pages/contact.html' | relative_url}}"
-                class="flex items-center border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white lg:text-lg">
-                Contact
-                <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.8L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
-                </svg>
-            </a>
-        </div>
+        <div class="swiper-pagination mb-4"></div>
+    </div>
+    <div class="flex justify-center">
+        <a href="{{'/pages/contact.html' | relative_url}}"
+            class="flex items-center border-2 border-red-700 px-4 py-2 text-red-700 bg-white rounded-full hover:bg-red-700 hover:text-white lg:text-lg">
+            Contact
+            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.8L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+            </svg>
+        </a>
     </div>
 </div>
