@@ -56,6 +56,41 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+    const statsCarousel = new Swiper(".stats-carousel", {
+        centeredSlides: false,
+        paginationClickable: true,
+        loop: true,
+        slidesPerView: 1,
+        autoHeight: true,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".stats-carousel .swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            1920: {
+                slidesPerView: 6,
+            },
+            1536: {
+                slidesPerView: 5,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+            640: {
+                slidesPerView: 2,
+            },
+            400: {
+                slidesPerView: 1,
+            },
+        },
+    });
+
     const mainCarousel = new Swiper(".main-carousel", {
         slidesPerView: 1,
         loop: true,
