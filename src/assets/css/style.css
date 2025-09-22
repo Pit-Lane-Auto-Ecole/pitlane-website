@@ -40,3 +40,17 @@
 .main-carousel .swiper-wrapper {
     padding-bottom: 0 !important;
 }
+
+.stats-carousel .swiper-slide:nth-child(odd) {
+    background-color: #d1d5db;
+}
+
+.stats-carousel .swiper-slide:nth-child(even) {
+    background-color: #e5e7eb;
+}
+
+@media (min-width: 1024px) {
+    .stats-carousel .swiper-wrapper {
+        padding-bottom: 0 !important;
+    }
+}

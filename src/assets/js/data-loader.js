@@ -1,5 +1,6 @@
 function loadCSVData(table) {
     const csvUrl = table.dataset.csv;
+    const groupSize = parseInt(table.dataset.group) || 1;
 
     fetch(csvUrl)
         .then((response) => response.text())
@@ -14,16 +15,23 @@ function loadCSVData(table) {
             headers.forEach((header) => {
                 const th = document.createElement("th");
                 th.textContent = header;
-                th.className = "border px-2 py-2 bg-gray-200";
+                th.className = "border px-2 py-2 bg-gray-300";
                 headerRow.appendChild(th);
             });
             thead.appendChild(headerRow);
 
             const tbody = table.querySelector("tbody");
             tbody.innerHTML = "";
-            rows.forEach((line) => {
+            rows.forEach((line, index) => {
                 const row = document.createElement("tr");
-                row.className = "even:bg-gray-100";
+
+                // ⚡ logique "groupée"
+                const groupIndex = Math.floor(index / groupSize);
+                if (groupIndex % 2 === 1) {
+                    row.className = "bg-gray-200";
+                } else {
+                    row.className = "bg-white";
+                }
 
                 const cells = line.split(",");
                 cells.forEach((cell) => {

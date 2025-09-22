@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const priceCarousel = new Swiper(".price-carousel", {
+    const defaultCarousel = new Swiper(".default-carousel", {
         centeredSlides: false,
         paginationClickable: true,
         loop: true,
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             delay: 5000,
         },
         pagination: {
-            el: ".price-carousel .swiper-pagination",
+            el: ".default-carousel .swiper-pagination",
             clickable: true,
         },
         breakpoints: {
@@ -27,31 +27,34 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
-    const courseCarousel = new Swiper(".course-carousel", {
+    const statsCarousel = new Swiper(".stats-carousel", {
         centeredSlides: false,
         paginationClickable: true,
         loop: true,
-        spaceBetween: 30,
         slidesPerView: 1,
         autoHeight: true,
         autoplay: {
             delay: 5000,
         },
         pagination: {
-            el: ".course-carousel .swiper-pagination",
+            el: ".stats-carousel .swiper-pagination",
             clickable: true,
         },
         breakpoints: {
-            1280: {
-                slidesPerView: 3,
-                spaceBetween: 30,
+            1920: {
+                slidesPerView: 6,
+            },
+            1536: {
+                slidesPerView: 5,
+            },
+            1024: {
+                slidesPerView: 4,
             },
             768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
+                slidesPerView: 3,
             },
-            400: {
-                slidesPerView: 1,
+            640: {
+                slidesPerView: 2,
             },
         },
     });
