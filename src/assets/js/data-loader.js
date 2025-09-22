@@ -15,7 +15,7 @@ function loadCSVData(table) {
             headers.forEach((header) => {
                 const th = document.createElement("th");
                 th.textContent = header;
-                th.className = "border px-2 py-2 bg-gray-200";
+                th.className = "border px-2 py-2 bg-gray-300";
                 headerRow.appendChild(th);
             });
             thead.appendChild(headerRow);
