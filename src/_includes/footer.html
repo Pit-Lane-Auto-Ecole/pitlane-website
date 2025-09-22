@@ -1,20 +1,22 @@
-<footer>
+<footer class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 mt-8">
     <div class="p-4 py-4 lg:py-8">
         <div class="max-w-screen-xl mx-auto w-full md:flex md:justify-between">
-            <div class="mb-6 md:mb-0">
+            <div class="mb-6 md:mb-0 flex flex-col items-center md:items-start">
                 <a href="{{ '/' | relative_url }}" class="flex items-center space-x-3">
-                    <img src="{{ '/assets/img/logo.png' | relative_url }}" class="h-20 xl:min-h-32"
+                    <img src="{{ '/assets/img/logo.png' | relative_url }}" class="h-32 xl:min-h-40"
                         alt="Pitlane Logo" />
                 </a>
-                <span class="self-center text-lg lg:text-xl xl:text-2xl whitespace-nowrap text-gray-500">L'artisan
-                    auto-école</span>
+                <span class="mt-2 text-lg md:text-xl xl:text-2xl whitespace-nowrap text-gray-400">
+                    L'artisan auto-école
+                </span>
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
                 {% for link in site.data.navigation %}
                 {% if link.dropdown %}
-                <div>
-                    <h2 class="mb-4 font-semibold text-gray-900 uppercase">{{ link.title }}</h2>
-                    <ul class="text-gray-500 font-medium">
+                <div class="text-center md:text-start">
+                    <h2 class="mb-2 text-lg lg:text-xl font-semibold text-red-700 uppercase">{{ link.title }}
+                    </h2>
+                    <ul class="text-gray-400 font-medium">
                         {% for item in link.items %}
                         <li class="mb-2">
                             <a href="{{ item.url | relative_url }}" class="hover:underline">
@@ -28,14 +30,14 @@
                 {% endfor %}
             </div>
         </div>
-        <hr class="w-full my-4 border-gray-200 lg:my-8" />
-        <div class="max-w-screen-xl mx-auto w-full sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center">© 2020 <a href="https://www.pitlane-autoecole.ch/"
+        <hr class="max-w-screen-xl mx-auto w-full my-4 border-gray-400 lg:my-8" />
+        <div class="max-w-screen-xl mx-auto w-full md:flex md:items-center md:justify-between">
+            <p class="text-sm text-center text-gray-400">© 2020 <a href="https://www.pitlane-autoecole.ch/"
                     class="hover:underline">Auto-école Pit Lane</a>. Tous droits réservés. Réalisé par <a
-                    href="https://www.daviddieperink.ch" class="hover:underline">David DIEPERINK</a>.</span>
-            <div class="flex mt-4 sm:justify-center sm:mt-0">
+                    href="https://www.daviddieperink.ch" class="hover:underline">David DIEPERINK</a>.</p>
+            <div class="flex mt-4 justify-center md:mt-0">
                 {% if site.socials.mail %}
-                <a href="mailto:{{ site.socials.mail }}" class="text-gray-500 hover:text-gray-900">
+                <a href="mailto:{{ site.socials.mail }}" class="text-gray-400 hover:text-gray-300">
                     <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                         <path
@@ -45,7 +47,7 @@
                 </a>
                 {%endif%}
                 {% if site.socials.facebook %}
-                <a href="{{ site.socials.facebook }}" class="text-gray-500 hover:text-gray-900 ms-4">
+                <a href="{{ site.socials.facebook }}" class="text-gray-400 hover:text-gray-300 ms-4">
                     <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                         <path
@@ -55,7 +57,7 @@
                 </a>
                 {% endif %}
                 {% if site.socials.instagram %}
-                <a href="{{ site.socials.instagram }}" class="text-gray-500 hover:text-gray-900 ms-4">
+                <a href="{{ site.socials.instagram }}" class="text-gray-400 hover:text-gray-300 ms-4">
                     <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                         <path
