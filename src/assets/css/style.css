@@ -42,7 +42,7 @@
 }
 
 .stats-carousel .swiper-slide:nth-child(odd) {
-    background-color: #f3f4f6;
+    background-color: #d1d5db;
 }
 
 .stats-carousel .swiper-slide:nth-child(even) {
