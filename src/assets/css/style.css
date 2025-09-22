@@ -49,11 +49,6 @@
     background-color: #e5e7eb;
 }
 
-.stats-carousel .swiper-wrapper,
-.course-carousel .swiper-wrapper {
-    padding-bottom: 50px !important;
-}
-
 @media (min-width: 1024px) {
     .stats-carousel .swiper-wrapper {
         padding-bottom: 0 !important;
