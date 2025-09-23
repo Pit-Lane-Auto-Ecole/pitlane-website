@@ -1,5 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const defaultCarousel = new Swiper(".default-carousel", {
+    const whyUsCarousel = new Swiper(".whyus-carousel", {
+        centeredSlides: false,
+        paginationClickable: true,
+        loop: true,
+        slidesPerView: 1,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".whyus-carousel .swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    const courseCarousel = new Swiper(".course-carousel", {
         centeredSlides: false,
         paginationClickable: true,
         loop: true,
@@ -9,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             delay: 5000,
         },
         pagination: {
-            el: ".default-carousel .swiper-pagination",
+            el: ".course-carousel .swiper-pagination",
             clickable: true,
         },
         breakpoints: {
