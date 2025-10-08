@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const whyUsCarousel = new Swiper(".whyus-carousel", {
+        centeredSlides: false,
+        paginationClickable: true,
+        loop: true,
+        slidesPerView: 1,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".whyus-carousel .swiper-pagination",
+            clickable: true,
+        },
+    });
+
     const defaultCarousel = new Swiper(".default-carousel", {
         centeredSlides: false,
         paginationClickable: true,
@@ -62,9 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainCarousel = new Swiper(".main-carousel", {
         slidesPerView: 1,
         loop: true,
-        autoplay: {
-            delay: 5000,
-        },
+        // autoplay: {
+        //     delay: 5000,
+        // },
         navigation: {
             nextEl: ".main-carousel .swiper-button-next",
             prevEl: ".main-carousel .swiper-button-prev",

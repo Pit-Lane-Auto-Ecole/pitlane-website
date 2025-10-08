@@ -41,6 +41,10 @@
     padding-bottom: 0 !important;
 }
 
+.whyus-carousel .swiper-wrapper {
+    padding-bottom: 40px !important;
+}
+
 .stats-carousel .swiper-slide:nth-child(odd) {
     background-color: #d1d5db;
 }

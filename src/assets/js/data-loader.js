@@ -37,7 +37,7 @@ function loadCSVData(table) {
                 cells.forEach((cell) => {
                     const td = document.createElement("td");
                     td.textContent = cell;
-                    td.className = "border px-2 py-2";
+                    td.className = "border px-1.5 py-1.5";
                     row.appendChild(td);
                 });
                 tbody.appendChild(row);
