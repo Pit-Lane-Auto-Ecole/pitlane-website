@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 30,
         slidesPerView: 1,
         autoplay: {
-            delay: 5000,
+            delay: 6000,
         },
         pagination: {
             el: ".default-carousel .swiper-pagination",
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1,
         autoHeight: true,
         autoplay: {
-            delay: 5000,
+            delay: 4000,
         },
         pagination: {
             el: ".stats-carousel .swiper-pagination",
