@@ -45,6 +45,18 @@
     {% if page.nav_active == "lieux" %}
     <script src="{{ '/assets/js/map-selector.js' | relative_url }}"></script>
     {% endif %}
+
+    <!-- Script for navbar dropdown -->
+    <script>
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            if (dropdown.classList.contains("hidden")) {
+                dropdown.classList.remove("hidden");
+            } else {
+                dropdown.classList.add("hidden");
+            }
+        }
+    </script>
 </body>
 
 </html>
