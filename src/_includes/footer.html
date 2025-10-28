@@ -67,6 +67,17 @@
                     <span class="sr-only">Instagram account</span>
                 </a>
                 {% endif %}
+                {% if site.socials.phone %}
+                <a href="tel:{{ site.socials.phone }}" class="text-gray-400 hover:text-gray-300 ms-4" target="_blank">
+                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512">
+                        <!--!Font Awesome Free 6.7.2 - Phone Icon-->
+                        <path
+                            d="M493.4 24.6l-104-24c-11.3-2.6-23 3.1-28.5 13.7l-48 104c-4.3 9.3-2 20.1 5.9 27.3l60.6 60.6c-36.3 76.7-99.5 139.9-176.2 176.2l-60.6-60.6c-7.2-7.9-18-10.2-27.3-5.9l-104 48c-10.6 5-16.3 17.2-13.7 28.5l24 104c2.6 11.3 13.3 19.2 25 19.2 256.5 0 464-207.5 464-464 0-11.7-7.9-22.4-19.2-25z" />
+                    </svg>
+                    <span class="sr-only">Phone number</span>
+                </a>
+                {% endif %}
             </div>
         </div>
     </div>
