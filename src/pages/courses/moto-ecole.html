@@ -3,8 +3,8 @@ layout: default
 nav_active: courses-motoecole
 ---
 
-<div class="flex px-4 sm:px-8 xl:px-0 max-w-7xl mx-auto justify-center">
-    <div class="py-12 bg-white md:px-0">
+<div class="flex px-4 sm:px-8 xl:px-0 max-w-[90rem] mx-auto">
+    <div class="xl:pt-10 py-6">
         <div class="flex flex-col lg:flex-row items-center">
             <div class="lg:w-1/2 mb-6 lg:mb-0">
                 <div class="flex w-full h-full overflow-hidden justify-center sm:px-2 xl:px-8">
@@ -13,7 +13,7 @@ nav_active: courses-motoecole
                 </div>
             </div>
             <div class="lg:w-1/2 lg:px-5">
-                <div class="w-full mx-auto pb-6 space-y-6 lg:space-y-8 xl:space-y-9 md:pr-0 md:pb-0">
+                <div class="w-full mx-auto space-y-6 lg:space-y-8 xl:space-y-9 md:pr-0 md:pb-0">
                     <h1 class="text-4xl font-extrabold tracking-tight text-zinc-900 xl:text-6xl text-center">
                         <span class="text-red-700">Moto-école</span>
                     </h1>
@@ -110,57 +110,64 @@ nav_active: courses-motoecole
     </div>
 </div>
 
-<div class="flex flex-col space-y-6 justify-center pb-8">
-    <h2 class="text-2xl font-extrabold tracking-tight text-center">
+<div class="max-w-7xl px-4 sm:px-8 mx-auto mb-6 lg:mb-10">
+    <h2 class="text-2xl font-extrabold tracking-tight text-center pb-6">
         <span class="text-red-700">Cours découverte moto</span>
     </h2>
-    <div class="flex w-full h-full overflow-hidden justify-center px-4 lg:px-8">
-        <img src="{{ 'assets/img/pages/moto-ecole/moto-decouverte.webp' | relative_url }}"
-            class="rounded-xl max-h-96 lg:max-h-none" />
-    </div>
-    <div class="px-4 sm:px-8 md:px-10 flex flex-col text-justify mx-auto">
-        <ul class="list-inside space-y-2 md:max-w-4xl">
-            <li class="flex">
-                <div>
-                    <svg class="h-4 mr-4 mt-1" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                        <path
-                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
-                    </svg>
-                </div>
-                <div class="space-y-1">
-                    <span>
-                        Toujours voulu faire de la moto? Ce cours d’initiation est fait pour toi.
-                    </span>
-                </div>
-            </li>
-            <li class="flex">
-                <div>
-                    <svg class="h-4 mr-4 mt-1" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                        <path
-                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
-                    </svg>
-                </div>
-                <span>
-                    Tu es à scooter et tu veux pouvoir saluer les motards? Viens suivre un cours découverte avec
-                    une moto 125 cm³.
-                </span>
-            </li>
-            <li class="flex">
-                <div>
-                    <svg class="h-4 mr-4 mt-1" xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                        <path
-                            d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
-                    </svg>
-                </div>
-                <span>
-                    Pas de véhicule pour faire tes 12 heures obligatoires? Contacte Maxime et loue ta moto 125
-                    cm³ pour tes cours avec Pit lane.
-                </span>
-            </li>
-        </ul>
+    <div class="flex flex-col lg:flex-row-reverse items-center">
+        <div class="lg:w-1/2 mb-6 lg:mb-0">
+            <div class="flex w-full h-full overflow-hidden justify-center">
+                <img src="{{ 'assets/img/pages/moto-ecole/moto-decouverte.webp' | relative_url }}"
+                    class="rounded-xl max-h-96 lg:max-h-none" />
+            </div>
+        </div>
+        <div class="lg:w-1/2 lg:mr-8">
+            <div class="flex flex-col text-justify mx-auto">
+                <ul class="list-inside space-y-2 md:max-w-4xl">
+                    <li class="flex">
+                        <div>
+                            <svg class="h-4 mr-4 mt-1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-1">
+                            <span>
+                                Toujours voulu faire de la moto ? Ce cours d’initiation est fait pour toi.
+                            </span>
+                        </div>
+                    </li>
+                    <li class="flex">
+                        <div>
+                            <svg class="h-4 mr-4 mt-1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                            </svg>
+                        </div>
+                        <span>
+                            Tu es à scooter et tu veux pouvoir saluer les motards ? Viens suivre un cours découverte
+                            avec
+                            une moto 125 cm³.
+                        </span>
+                    </li>
+                    <li class="flex">
+                        <div>
+                            <svg class="h-4 mr-4 mt-1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 320 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                            </svg>
+                        </div>
+                        <span>
+                            Pas de véhicule pour faire tes 12 heures obligatoires ? Contacte Maxime et loue ta moto 125
+                            cm³ pour tes cours avec Pit lane.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -173,7 +180,7 @@ nav_active: courses-motoecole
             <span class="text-red-700">vente / location / réparation</span>
         </h3>
     </div>
-    <div class="flex flex-col lg:flex-row items-center">
+    <div class="flex flex-col lg:flex-row items-center space-x-6">
         <div class="lg:w-1/2 mb-6 lg:mb-0">
             <div class="flex w-full h-full overflow-hidden justify-center lg:pr-4 xl:pr-0">
                 <img src="{{ 'assets/img/pages/moto-ecole/ricci-motos.webp' | relative_url }}"
@@ -181,7 +188,7 @@ nav_active: courses-motoecole
             </div>
         </div>
         <div class="lg:w-1/2 lg:pl-4 xl:pl-0">
-            <div class="pb-6 space-y-6 lg:space-y-8 xl:space-y-9 md:pr-0 md:pb-0 justify-center">
+            <div class="pb-6 space-y-6 lg:space-y-8 xl:space-y-9 lg:pr-0 lg:pb-0 justify-center">
                 <div class="text-center">
                     <h2 class="text-amber-500 text-xl md:text-2xl font-extrabold tracking-tight mb-2">
                         RICCI MOTOS
