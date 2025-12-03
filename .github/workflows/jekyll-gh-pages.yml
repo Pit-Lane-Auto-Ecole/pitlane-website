@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - develop
   workflow_dispatch:
 
 permissions:
@@ -38,6 +39,9 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Set CNAME for GitHub Pages
+        run: echo "${GITHUB_REF##refs/heads/}" | grep -q 'main' && echo "www.pitlane-autoecole.ch" > _site/CNAME || echo "staging.pitlane-autoecole.ch" > _site/CNAME
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
         id: pages
@@ -50,9 +54,10 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # Dynamically set environment based on branch
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      name: ${{ github.ref == 'refs/heads/main' && 'github-pages' || 'staging' }}
+      url: ${{ github.ref == 'refs/heads/main' && 'https://www.pitlane-autoecole.ch' || 'https://staging.pitlane-autoecole.ch' }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
