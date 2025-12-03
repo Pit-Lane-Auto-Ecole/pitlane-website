@@ -12,7 +12,7 @@ RUN apk add --no-cache \
 WORKDIR /srv/jekyll
 
 # Copier les fichiers de dépendances
-COPY Gemfile ./
+COPY Gemfile Gemfile.lock ./
 
 # Installer les gems
 RUN bundle install --jobs 4 --retry 3
